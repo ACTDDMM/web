@@ -9,3 +9,5 @@
 ## 如：百度云盘的视频   链接：xxx     密码：xxx   讲的什么内容
 
 ## 5.  .gitignore 是用来说明不用上传文件的
+
+## 6.  .gitignore文件中输入这个  /vue-pro/node_modules/ 忽略node_modules包文件
