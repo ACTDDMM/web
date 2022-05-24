@@ -1,10 +1,16 @@
 # **Git**
 
-## 1.VCS系统
+## 1.本地连接远程仓库
 
-​	版本控制系统，用于项目存储、共享、合并、历史回退、代码追踪等功能
+```
+　　初始化仓库：git init
 
-​	常用的VCS软件  SVN  git
+　　建立连接：git remote add origin 远程仓库地址
+
+　　远程仓库pull到本地：git pull origin master
+```
+
+
 
 ## 2.git中常用的概念
 
