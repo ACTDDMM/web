@@ -10,17 +10,17 @@ use photography;
 -- #创建管理员表
 create table py_admin(
   a_id int primary key auto_increment,
-  a_name varchar(16) unique,
+  a_name varchar(16),
   a_password varchar(16) not null
 );
 
 -- #创建用户表
 create table py_user(
   u_id int primary key auto_increment,
-  u_name varchar(16) not null,
-  u_pwd varchar(16) not null,
+  u_name varchar(32) ,
+  u_pwd varchar(16) ,
   u_phone char(11) not null unique,
-  u_email varchar(32)
+  u_email varchar(64)
 );
 
 -- #商品表
