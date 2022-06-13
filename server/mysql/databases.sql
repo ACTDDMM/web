@@ -1,6 +1,6 @@
 -- #设置客户端连接服务器端的编码
 
-set names utf8mb64;
+set names utf8mb4;
 
 -- #丢弃数据库，如果存在
 
@@ -29,7 +29,9 @@ create table py_user(
     u_name varchar(32),
     u_pwd varchar(16),
     u_phone char(11) not null unique,
-    u_email varchar(64)
+    u_email varchar(64),
+    user_name varchar(32),
+    u_avatar varchar(128)
 );
 
 -- #商品表
@@ -72,19 +74,36 @@ create table py_camera_family(
     pc_name varchar(32)
 );
 
+-- 关于我们表
+
+create table py_aboutus(
+    desc_text varchar(32),
+    content varchar(20000)
+);
+
+-- 轮播图标
+
+create table py_index_carousel(
+    cid int PRIMARY KEY AUTO_INCREMENT,
+    img VARCHAR(128),
+    title VARCHAR(64),
+    href VARCHAR(128)
+);
+
+-- 首页商品表
+
+create table py_index_product(
+    pid int PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(64),
+    price DECIMAL(8, 2),
+    pic VARCHAR(128),
+    camera_id INT -- 和商品表id相对应
+);
+
 -- # 插入数据
 
 insert into py_admin values(null,'admin','123456');
 
-INSERT INTO
-    py_user(u_id, u_name, u_pwd, u_phone, u_email)
-VALUES(
-        null,
-        '张三',
-        '123456',
-        '13363912860',
-        '13363912860@163.com'
-    );
 
 insert into py_camera_family values(1,'canon');
 
