@@ -9,8 +9,6 @@
 <script>
 import MyFooter from './components/MyFooter.vue'
 
-import  './assets/css/style.css';
-
 import MyHeader from './components/MyHeader.vue';
   export default {
   components: { MyFooter, MyHeader },
