@@ -24,19 +24,13 @@ create table py_admin(
 
 -- -- #创建用户表
 
--- create table py_user(
-
---   u_id int primary key auto_increment,
-
---   u_name varchar(32) ,
-
---   u_pwd varchar(16) ,
-
---   u_phone char(11) not null unique,
-
---   u_email varchar(64)
-
--- );
+create table py_user(
+    u_id int primary key auto_increment,
+    u_name varchar(32),
+    u_pwd varchar(16),
+    u_phone char(11) not null unique,
+    u_email varchar(64)
+);
 
 -- #商品表 c_id c_category c_price c_title c_details c_img c_stock c_shelf_time c_spec c_frame c_output c_shooting
 
@@ -70,7 +64,7 @@ create table py_camera(
 
 -- 商品类别表
 
-create table py_family(
+create table py_camera_family(
     pc_id smallint primary key,
     -- 对应 商品表的 类别
     pc_name varchar(32)
@@ -80,21 +74,31 @@ create table py_family(
 
 insert into py_admin values(null,'admin','123456');
 
+INSERT INTO
+    py_user(u_id, u_name, u_pwd, u_phone, u_email)
+VALUES(
+        null,
+        '张三',
+        '123456',
+        '13363912860',
+        '13363912860@163.com'
+    );
+
 -- insert into py_user values(null,'张三','123456','13759963313','13759963313@163.com');
 
 -- insert into py_product values(null,10,27900.00,,'徕卡/Leica CL数码微单相机莱卡','德国制造 传承景点，徕卡M-P与它传奇镜头群所建立的不朽价值，时代相传','/imgae/produtcs/11.png',255,1654581886055)
 
-insert into py_family values(1,'canon');
+insert into py_camera_family values(1,'canon');
 
-insert into py_family values(2,'nikon');
+insert into py_camera_family values(2,'nikon');
 
-insert into py_family values(3,'panasonic');
+insert into py_camera_family values(3,'panasonic');
 
-insert into py_family values(4,'hasselblad');
+insert into py_camera_family values(4,'hasselblad');
 
-insert into py_family values(5,'sony');
+insert into py_camera_family values(5,'sony');
 
-insert into py_family values(6,'Fujifilm');
+insert into py_camera_family values(6,'Fujifilm');
 
 -- #商品表 c_id c_category c_family_id c_price c_title c_img c_stock c_shelf_time c_name c_type c_frame c_output c_shooting
 
