@@ -8,6 +8,8 @@ const cors = require("cors");
 const userRouter = require("./router/user");
 // 引入路由 -- admin
 const adminRouter = require("./router/admin");
+// 引入路由 -- products
+const productRouter = require("./router/product");
 
 // 创建服务器
 const app = express();
@@ -43,6 +45,9 @@ app.use("/users", userRouter);
 
 // 管理员路由  /admin 前缀
 app.use("/admin", adminRouter);
+
+// 管理员路由  /admin 前缀
+app.use("/product", productRouter);
 
 // 错误处理中间件
 app.use((err, req, res, next) => {
