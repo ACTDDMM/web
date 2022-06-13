@@ -1,6 +1,6 @@
 -- #设置客户端连接服务器端的编码
 
-set names utf8;
+set names utf8mb64;
 
 -- #丢弃数据库，如果存在
 
@@ -32,14 +32,14 @@ create table py_user(
     u_email varchar(64)
 );
 
--- #商品表 c_id c_category c_price c_title c_details c_img c_stock c_shelf_time c_spec c_frame c_output c_shooting
+-- #商品表
 
 create table py_camera(
     c_id int primary key auto_increment,
-    -- 商品类别
-    c_category smallint,
     -- 所属型号家族编号
     c_family_id int,
+    -- 商品类别
+    c_category varchar(32),
     -- 价格
     c_price decimal(8, 2),
     -- 商品标题
@@ -59,7 +59,9 @@ create table py_camera(
     -- RAW照片输出
     c_output varchar(32),
     -- 视频拍摄能力
-    c_shooting varchar(32)
+    c_shooting varchar(32),
+    -- 像素
+    c_pixel varchar(32)
 );
 
 -- 商品类别表
@@ -84,10 +86,6 @@ VALUES(
         '13363912860@163.com'
     );
 
--- insert into py_user values(null,'张三','123456','13759963313','13759963313@163.com');
-
--- insert into py_product values(null,10,27900.00,,'徕卡/Leica CL数码微单相机莱卡','德国制造 传承景点，徕卡M-P与它传奇镜头群所建立的不朽价值，时代相传','/imgae/produtcs/11.png',255,1654581886055)
-
 insert into py_camera_family values(1,'canon');
 
 insert into py_camera_family values(2,'nikon');
@@ -100,14 +98,14 @@ insert into py_camera_family values(5,'sony');
 
 insert into py_camera_family values(6,'Fujifilm');
 
--- #商品表 c_id c_category c_family_id c_price c_title c_img c_stock c_shelf_time c_name c_type c_frame c_output c_shooting
+-- #商品表
 
 insert into
     py_camera
 values(
         null,
-        'canon',
         1,
+        'canon',
         43200.00,
         '佳能/Canon EOS 1DX MarkIII单反机身 EOS 1DX3代 1DX3',
         '/img/product/c0152ccb9b2920bd.jpg',
@@ -117,15 +115,16 @@ values(
         '单反相机',
         '全画幅',
         '14bit',
-        '4K 60P'
+        '4K 60P',
+        '3800-4500万'
     );
 
 insert into
     py_camera
 values(
         null,
-        'nikon',
         2,
+        'nikon',
         43999.00,
         '尼康/Nikon D6 全画幅 单反相机机身',
         '/img/product/a7bc068f9561d65b.png',
@@ -135,15 +134,16 @@ values(
         '单反相机',
         '全画幅',
         '10bit',
-        '4K 30P'
+        '4K 30P',
+        '3000-3500万'
     );
 
 insert into
     py_camera
 values(
         null,
-        'panasonic',
         3,
+        'panasonic',
         4098.00,
         '松下(Panasonic)G100K微单相机 数码相机 vlog相机 微单套机(12-32mm)4K视频 专业收音 美肤自拍 触摸屏',
         '/img/product/0f58e595f60f6dd0.jpg',
@@ -153,15 +153,16 @@ values(
         '数码相机',
         '中画幅',
         '12bit',
-        '4K 30P'
+        '4K 30P',
+        '3000-4000万'
     );
 
 insert into
     py_camera
 values(
         null,
-        'hasselblad',
         4,
+        'hasselblad',
         39990.00,
         '哈苏(HASSELBLAD)X1D II 50C 中画幅无反数码相机',
         '/img/product/c64b1ea0b9721cbf.jpg',
@@ -171,15 +172,16 @@ values(
         '数码相机',
         '中画幅',
         '不支持RAW',
-        '不支持视频拍摄'
+        '不支持视频拍摄',
+        '3000-5500万'
     );
 
 insert into
     py_camera
 values(
         null,
-        'sony',
         5,
+        'sony',
         15699.00,
         '索尼/SONY A7RIII A7R3A 全画幅微单 三代 数码相机单机身',
         '/img/product/fe35fd8fc4fe06e1.jpg',
@@ -189,15 +191,16 @@ values(
         '数码相机',
         '全画幅',
         '10bit',
-        '4K 60P'
+        '4K 60P',
+        '3000-3800万'
     );
 
 insert into
     py_camera
 values(
         null,
-        'Fujifilm',
         6,
+        'Fujifilm',
         11190.00,
         '富士(FUJIFILM)【旗舰京品】XT3微单数码相机X-T3机身套机4KXT30升级版 ',
         '/img/product/024b930cf2be7ec8.jpg',
@@ -207,5 +210,6 @@ values(
         '数码相机',
         '全画幅',
         '10bit',
-        '4K 30P'
+        '4K 30P',
+        '4000-4500万'
     );
