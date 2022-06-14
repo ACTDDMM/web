@@ -6,6 +6,7 @@
       <!-- 左侧展示栏 -->
       <div class="content-left">
         <div class="left-items">
+          <div style="text-align: left; padding: 2px 2px 2px 8px">热销商品</div>
           <div class="item-img">
             <img src="../assets/img/products/024b930cf2be7ec8.jpg" alt="" />
           </div>

@@ -12,10 +12,9 @@
 body {
   background-color: rgb(247, 237, 237);
 }
-
+/* 中间商品展示部分 */
 .content {
   width: 1200px;
-  height: 1240px;
   margin: 10px 0px;
   display: flex;
   flex-direction: row;
@@ -24,6 +23,7 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+/* 左侧栏 */
 .content .content-left {
   width: 200px;
   height: 840px;
@@ -32,10 +32,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+/* 左侧栏中商品 */
 .content .content-left .left-items {
   width: 100%;
   height: 280px;
   text-align: center;
+  padding: 4px;
 }
 .content .content-left .left-items .item-img img {
   width: 100%;
@@ -65,13 +67,18 @@ body {
 }
 .content .content-rigth .product-content {
   width: 220px;
-  height: 295px;
+  height: 300px;
   background-color: #fff;
   padding: 8px;
   display: flex;
   flex-direction: column;
-  margin: 11px;
+  margin: 11px; 
+  border: 2px solid #fff;
 }
+.content .content-rigth .product-content:hover{
+  border: 2px solid #eee;
+}
+
 .content .content-rigth .product-content .pro_img img {
   width: 100%;
 }
