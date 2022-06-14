@@ -1,0 +1,98 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(247, 237, 237);
+}
+
+.content {
+  width: 1200px;
+  height: 1240px;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.content .content-left {
+  width: 200px;
+  height: 840px;
+  background-color: rgb(245, 246, 250);
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.content .content-left .left-items {
+  width: 100%;
+  height: 280px;
+  text-align: center;
+}
+.content .content-left .left-items .item-img img {
+  width: 100%;
+}
+.content .content-left .left-items .item-text h4 {
+  margin: 4px;
+  font-weight: 100;
+}
+.content .content-left .left-items .item-text:nth-child(1) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.content .content-rigth {
+  width: 1000px;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: left;
+  align-content: flex-start;
+  background-color: rgb(245, 246, 250);
+}
+.content .content-rigth .product-content {
+  width: 220px;
+  height: 295px;
+  background-color: #fff;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 11px;
+}
+.content .content-rigth .product-content .pro_img img {
+  width: 100%;
+}
+.content .content-rigth .product-content .pro_text {
+  text-align: center;
+  font-weight: 100;
+}
+.content .content-rigth .product-content .pro_text a {
+  text-decoration: none;
+  color: black;
+}
+.content .content-rigth .product-content .pro_text a > span:nth-child(1) {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.content .content-rigth .product-content .pro_text h4 {
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=products_list.css.map */
