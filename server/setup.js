@@ -10,6 +10,8 @@ const userRouter = require("./router/user");
 const adminRouter = require("./router/admin");
 // 引入路由 -- products
 const productRouter = require("./router/product");
+// 引入路由 -- index
+const indexRouter = require("./router/index");
 
 // 创建服务器
 const app = express();
@@ -41,13 +43,16 @@ app.use(express.static("./public"));
 
 // 挂载路由
 // 用户路由 /users 前缀
-app.use("/users", userRouter);
+app.use("/user", userRouter);
 
 // 管理员路由  /admin 前缀
 app.use("/admin", adminRouter);
 
 // 管理员路由  /admin 前缀
 app.use("/product", productRouter);
+
+// 首页数据  /index 前缀
+app.use("/index", indexRouter);
 
 // 错误处理中间件
 app.use((err, req, res, next) => {
