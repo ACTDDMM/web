@@ -664,3 +664,11 @@ VALUES
         '张三',
         '/img/index/user_avatar/1.jpg'
     );
+
+INSERT INTO
+    `py_aboutus` (`desc_text`, `content`)
+VALUES
+    (
+        '关于我们',
+        '<div class=\"dm\">\r\n<div class=\"dz\">\r\n<div class=\"dz2\">\r\n<p>各店地址及联系方式:</p>\r\n</div>\r\n<div>\r\n<p>网络销售联系电话：63109071 / 5936 1005</p>\r\n<p>陶然亭店：西城区南纬路41号楼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话：67080389</p>\r\n <p>国 贸\r\n店：朝阳区光华路北3号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话：66011033</p>\r\n<p>张自忠店：东城区东四北大街甲201号</p>\r\n<div class=\"dz3\">\r\n<p>业务联系电话：13501014101</p>\r\n<p>售后服务电话：13501014101 </p>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"image\">\r\n<img src=\"/img/7018428ce85d43e6.png\" alt=\"\" />\r\n<br />\r\n<img src=\"/img/26e5f7f0edc443e8.jpg\" alt=\"\" />\r\n<br />\r\n<img src=\"/img/686aaa1f29a10c7d.jpg\" alt=\"\" />\r\n<br />\r\n<img src=\"/img/061ceae68108140a.jpg\" alt=\"\" />\r\n<br />\r\n<img src=\"/img/32c5b0433e3580c8.jpg\" alt=\"\" />\r\n</div>\r\n</div>'
+    );
