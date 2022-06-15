@@ -6,8 +6,10 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/products/:c_id",
+    // 参数可选
+    path: "/products/:serval?",
     name: "products",
+    props: true,
     component: () => import("../views/ProductList.vue"),
   },
   {

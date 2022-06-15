@@ -11,18 +11,23 @@
             </a>
           </div>
           <div class="container-input">
-            <input type="text" placeholder="请相机输入类型" v-model="serval"/>
+            <input
+              type="text"
+              placeholder="请相机输入类型"
+              v-model="serval"
+              @keyup.enter="goProducts"
+            />
             <button class="btn">
               <router-link
-                :to="'/products'+serval"
+                :to="'/products/' + serval"
                 style="color: #fff; text-decoration: none"
                 >搜索
-                </router-link>
+              </router-link>
             </button>
           </div>
           <div class="container-right">
             <ul>
-              <li><a @click="gologin">登录</a></li>
+              <li><a>登录</a></li>
               <li><a href="">注册</a></li>
               <li><a href="">购物车</a></li>
             </ul>
@@ -66,12 +71,14 @@
 export default {
   data() {
     return {
-      serval: '',
-    }
+      serval: "",
+    };
   },
   methods: {
-    gologin() {
-      window.location.href = "../#/static/login.html";
+    goProducts() {
+      if (this.$route.params.serval != this.serval) {
+        this.$router.push("/products/" + this.serval);
+      }
     },
   },
 };

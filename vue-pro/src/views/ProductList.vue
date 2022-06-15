@@ -44,18 +44,25 @@
 
 <script>
 export default {
+  props: ["serval"],
   mounted() {
     this.getCameraList();
     console.log(this);
   },
+  watch:{
+    serval(){
+      this.getCameraList()
+    }
+  },
   data() {
     return {
       data: null,
+      newCamera:null,
     };
   },
   methods: {
     getCameraList() {
-      let url = "http://127.0.0.1:3000/product/list";
+      let url = `http://127.0.0.1:3000/product/list?kw=`+this.serval;
       this.axios.get(url).then(res => {
         this.data = res.data.data;
         console.log(this.data);
