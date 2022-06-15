@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/products",
+    path: "/products/:c_id",
     name: "products",
     component: () => import("../views/ProductList.vue"),
   },

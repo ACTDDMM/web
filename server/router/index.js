@@ -42,5 +42,23 @@ router.get("/aboutus", (req, res, next) => {
     }
   });
 });
+//3.首页商品数据
+// 请求方式 get
+// 接口地址  http://127.0.0.1:3000/index/pro
+router.get("/pro", (req, res, next) => {
+  let sql = "select * from py_index_product";
+  pool.query(sql, (err, result) => {
+    if (err) {
+      next(err);
+      return;
+    }
+    if (result.length) {
+      res.send({ code: 1, msg: "ok", data: result });
+    } else {
+      res.send({ code: 0, msg: "请求失败" });
+    }
+  });
+});
+
 // 导出
 module.exports = router;

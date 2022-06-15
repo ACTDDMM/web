@@ -11,8 +11,14 @@
             </a>
           </div>
           <div class="container-input">
-            <input type="text" placeholder="相机" />
-            <button class="btn">搜索</button>
+            <input type="text" placeholder="请相机输入类型" v-model="serval"/>
+            <button class="btn">
+              <router-link
+                :to="'/products'+serval"
+                style="color: #fff; text-decoration: none"
+                >搜索
+                </router-link>
+            </button>
           </div>
           <div class="container-right">
             <ul>
@@ -34,7 +40,9 @@
             text-color="#333"
             active-text-color="#ffd04b"
           >
-            <el-menu-item index="1">首页</el-menu-item>
+            <el-menu-item index="1">
+              <router-link to="/">首页</router-link>
+            </el-menu-item>
             <el-menu-item index="2">
               <router-link to="/aboutus">关于我们</router-link>
             </el-menu-item>
@@ -56,6 +64,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      serval: '',
+    }
+  },
   methods: {
     gologin() {
       window.location.href = "../#/static/login.html";

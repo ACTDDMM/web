@@ -95,7 +95,7 @@ create table py_index_carousel(
 
 create table py_index_product(
     pid int PRIMARY KEY AUTO_INCREMENT,
-    title VARCHAR(64),
+    title VARCHAR(128),
     price DECIMAL(8, 2),
     pic VARCHAR(128),
     camera_id INT -- 和商品表id相对应
@@ -671,4 +671,72 @@ VALUES
     (
         '关于我们',
         '<div class=\"dm\">\r\n<div class=\"dz\">\r\n<div class=\"dz2\">\r\n<p>各店地址及联系方式:</p>\r\n</div>\r\n<div>\r\n<p>网络销售联系电话：63109071 / 5936 1005</p>\r\n<p>陶然亭店：西城区南纬路41号楼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话：67080389</p>\r\n <p>国 贸\r\n店：朝阳区光华路北3号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话：66011033</p>\r\n<p>张自忠店：东城区东四北大街甲201号</p>\r\n<div class=\"dz3\">\r\n<p>业务联系电话：13501014101</p>\r\n<p>售后服务电话：13501014101 </p>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"image\">\r\n<img src=\"./img/aboutus/7018428ce85d43e6.png\" alt=\"\" />\r\n<br />\r\n<img src=\"./img/aboutus/26e5f7f0edc443e8.jpg\" alt=\"\" />\r\n<br />\r\n<img src=\"./img/aboutus/686aaa1f29a10c7d.jpg\" alt=\"\" />\r\n<br />\r\n<img src=\"./img/aboutus/061ceae68108140a.jpg\" alt=\"\" />\r\n<br />\r\n<img src=\"./img/about/32c5b0433e3580c8.jpg\" alt=\"\" />\r\n</div>\r\n</div>'
+    );
+
+INSERT INTO
+    `py_index_product` (`pid`, `title`, `price`, `pic`, `camera_id`)
+VALUES
+    (
+        NULL,
+        '佳能/Canon EOS 1DX MarkIII单反机身 EOS 1DX3代 1DX3',
+        '43200.00',
+        'c0152ccb9b2920bd.jpg',
+        '1'
+    ),
+    (
+        NULL,
+        '索尼/SONY A7RIII A7R3A 全画幅微单 三代 数码相机单机身',
+        '15699.00',
+        'fe35fd8fc4fe06e1.jpg',
+        '5'
+    );
+
+INSERT INTO
+    `py_index_product` (`pid`, `title`, `price`, `pic`, `camera_id`)
+VALUES
+    (
+        NULL,
+        '松下(Panasonic)G100K微单相机 数码相机 vlog相机 微单套机(12-32mm)',
+        '4098.00',
+        '0f58e595f60f6dd0.jpg',
+        '3'
+    );
+
+INSERT INTO
+    `py_index_product` (`pid`, `title`, `price`, `pic`, `camera_id`)
+VALUES
+    (
+        NULL,
+        '尼康/Nikon D6 全画幅 单反相机机身',
+        '43999.00',
+        'a7bc068f9561d65b.png',
+        '2'
+    ),
+    (
+        NULL,
+        '哈苏(HASSELBLAD)X1D II 50C 中画幅无反数码相机',
+        '39990.00',
+        'c64b1ea0b9721cbf.jpg',
+        '4'
+    ),
+    (
+        NULL,
+        '富士(FUJIFILM)【旗舰京品】XT3微单数码相机X-T3机身套机4KXT30升级版',
+        '11190.00',
+        '024b930cf2be7ec8.jpg',
+        '6'
+    ),
+    (
+        NULL,
+        '徕卡(Leica)Q2全画幅便携数码相机 黑色19051 (4730万像素 4K视频录制 内置定焦镜',
+        '45799.00',
+        'e036819be879179c.jpg',
+        '7'
+    ),
+    (
+        NULL,
+        '哈苏(HASSELBLAD) X1D II 50C中画幅无反数码相机 微单 自动对焦 二代 哈苏X',
+        '48989.00',
+        'c119ed106ad50b28.jpg',
+        '17'
     );
