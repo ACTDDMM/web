@@ -8,7 +8,7 @@
         <div class="left-items">
           <div style="text-align: left; padding: 2px 2px 2px 8px">热销商品</div>
           <div class="item-img">
-            <img src="../assets/img/products/024b930cf2be7ec8.jpg" alt="" />
+            <img src="/img/products/024b930cf2be7ec8.jpg" alt="" />
           </div>
           <div class="item-text">
             <h4 class="itme-title">索尼(SONY)Alpha 7</h4>

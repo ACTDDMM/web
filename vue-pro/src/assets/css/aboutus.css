@@ -1,0 +1,10 @@
+.dm {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.dm > .dz > .dz2,
+.dz3 {
+  margin: 10px auto;
+  font-weight: bold;
+}

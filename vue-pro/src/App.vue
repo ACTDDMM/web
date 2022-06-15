@@ -1,8 +1,8 @@
 <template>
   <div>
-    <my-header></my-header>
+    <my-header v-if="this.$route.path!='/login'"></my-header>
     <router-view />
-    <my-footer></my-footer>
+    <my-footer  v-if="this.$route.path!='/login'"></my-footer>
   </div>
 </template>
 
