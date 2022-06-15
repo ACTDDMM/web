@@ -15,7 +15,7 @@ router.get("/list", (req, res, next) => {
   let obj = req.query;
   console.log(obj);
   console.log(typeof obj.kw);
-  if (obj.kw.length) {
+  if (obj.kw != "undefined") {
     pool.query(
       "select * from py_camera where c_category=?",
       [obj.kw],
@@ -32,7 +32,7 @@ router.get("/list", (req, res, next) => {
         }
       }
     );
-  } else{
+  } else {
     pool.query("select * from py_camera", (err, result) => {
       if (err) {
         next(err);
@@ -74,7 +74,7 @@ router.get("/single/:c_id", (req, res, next) => {
 // 请求方式 get
 // http://127.0.0.1:3000/product/newcamera
 router.get("/newcamera", (req, res, next) => {
-  let sql = "select * from py_camera ORDER BY c_shelf_time desc LIMIT 0,5";
+  let sql = "select * from py_camera ORDER BY c_shelf_time desc LIMIT 0,3";
   pool.query(sql, (err, result) => {
     console.log(result);
     if (err) {

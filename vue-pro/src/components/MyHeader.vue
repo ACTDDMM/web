@@ -6,9 +6,9 @@
         <div class="container">
           <div class="container-left">
             <!-- logo -->
-            <a href="">
+            <router-link to="/">
               <img src="/img/index/logo.png" alt="" />
-            </a>
+            </router-link>
           </div>
           <div class="container-input">
             <input
