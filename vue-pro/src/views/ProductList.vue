@@ -72,7 +72,7 @@ export default {
       let url = `http://127.0.0.1:3000/product/list?kw=` + this.serval;
       this.axios.get(url).then((res) => {
         this.data = res.data.data;
-        console.log(this.data);
+        console.log(res);
       });
     },
     getNewCamera() {

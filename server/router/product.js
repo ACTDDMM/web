@@ -34,13 +34,27 @@ router.get("/list", (req, res, next) => {
     );
   } else {
     pool.query("select * from py_camera", (err, result) => {
+      // 分页处理
+      let pro = result;
+      let arr = [];
+      // 循环截取
+      for (var i = 0, page = 1; i < result.length; i += 6) {
+        let temp = pro.slice(i, i + 6);
+        // console.log(temp);
+        for (let i = 0; i < temp.length; i++) {
+          // console.log(i);
+          temp[i]["page"] = page;
+          arr.push(temp[i]);
+        }
+        page++;
+      }
       if (err) {
         next(err);
         return;
       }
       // 判断长度 确定是否有值
       if (result.length) {
-        res.send({ code: 1, msg: "ok", data: result });
+        res.send({ code: 1, msg: "ok", data: arr });
       } else {
         res.send({ code: 0, msg: "服务器端错误" });
       }
@@ -86,7 +100,31 @@ router.get("/newcamera", (req, res, next) => {
     }
   });
 });
-// //4.获取对应品牌的商品
-// router.get("");
+// 4.首页数据
+// 请求所有数据
+// http://127.0.0.1:3000/product/indata
+router.get("/indata", (req, res, next) => {
+  let sql1 = "select * from py_index_carousel";
+  let sql2 = "select * from py_index_product";
+  pool.query(sql1, (err, result1) => {
+    if (err) {
+      next(err);
+      return;
+    }
+    if (result1.length > 1) {
+      pool.query(sql2, (err, result2) => {
+        if (err) {
+          next(err);
+          return;
+        }
+        res.send({
+          code: 1,
+          msg: "ok",
+          data: { carousel: result1, indexproduct: result2 },
+        });
+      });
+    }
+  });
+});
 // 导出
 module.exports = router;
