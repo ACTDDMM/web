@@ -364,7 +364,7 @@ values(
         'sony',
         9499.00,
         'SONY 索尼 DSC-RX100M7 黑卡7 RX100VII 眼部对焦 Vlog rx100M7 黑卡7(豪华套装)',
-        'fe35fd8fc4fe06e1.jpg',
+        '45df69fb183e35f6.jpg',
         500,
         1655096567278,
         'SONY 索尼 DSC-RX100M7 黑卡7 RX100VII 眼部对焦 Vlog rx100M7 黑卡7(豪华套装)',

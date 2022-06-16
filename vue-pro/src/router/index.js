@@ -1,10 +1,16 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import NotFound from "../views/NotFound.vue";
+import Index from '../views/Index.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: '/',
+    name: 'index',
+    component:Index 
+  },
   {
     // 参数可选
     path: "/products/:serval?",
