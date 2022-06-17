@@ -25,7 +25,7 @@
       <!-- 右侧商品内容 -->
       <div class="content-rigth" v-if="data">
         <!-- 商品内容 -->
-        <div
+        <!-- <div
           class="product-content"
           v-for="{ c_title, c_price, c_img, c_id } in this.data"
           :key="c_id"
@@ -39,22 +39,28 @@
             </a>
             <h4>￥{{ c_price }}.00</h4>
           </div>
+        </div> -->
+        <product-cell v-for="x in data" :p="x" :key="x.c_id" />
+        <!-- 分页 -->
+        <div class="paging" v-if="data">
+          <span>上一页</span>
+          <span v-for="n in data.pagecount" :key="n">{{ n }}</span>
+          <span>下一页</span>
         </div>
       </div>
-      <!-- 分页 -->
-      <div class="paging"></div>
     </div>
-    <!-- <div>尾</div> -->
   </div>
 </template>
 
 <script>
+import ProductCell from "../components/ProductCell.vue";
 export default {
+  components: { ProductCell },
   props: ["serval"],
   mounted() {
     this.getCameraList();
     this.getNewCamera();
-    console.log(this);
+    console.log(this.data);
   },
   watch: {
     serval() {
@@ -70,14 +76,14 @@ export default {
   methods: {
     getCameraList() {
       let url = `http://127.0.0.1:3000/product/list?kw=` + this.serval;
-      this.axios.get(url).then((res) => {
+      this.axios.get(url).then(res => {
         this.data = res.data.data;
-        console.log(res);
+        console.log(this.data);
       });
     },
     getNewCamera() {
       let url = "http://127.0.0.1:3000/product/newcamera";
-      this.axios.get(url).then((res) => {
+      this.axios.get(url).then(res => {
         this.newCamera = res.data.data;
         console.log(res);
       });

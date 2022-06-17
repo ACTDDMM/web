@@ -1,26 +1,26 @@
 <template>
   <div>
-    <!-- <div
-      class="product-content"
-      v-for="{ c_title, c_price, c_img, c_id } in this.data"
-      :key="c_id"
-    >
+    <div class="product-content">
       <div class="pro_img">
-        <img :src="`/img/products/${c_img}`" alt="" />
+        <img :src="`/img/products/${p.c_img}`" alt="" />
       </div>
       <div class="pro_text">
-        <a href="">
-          <span>{{ c_title }} </span>
-        </a>
-        <h4>￥{{ c_price }}.00</h4>
+        <router-link :to="`/product/detail/${p.c_id}`">
+          <span>{{ p.c_title }} </span>
+        </router-link>
+        <h4>￥{{ p.c_price }}.00</h4>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script>
+import "../assets/css/products_list.css";
 export default {
-  props: [""],
+  props: ["p"],
+  mounted() {
+    console.log(this.p);
+  },
 };
 </script>
 

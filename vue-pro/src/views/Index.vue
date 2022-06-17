@@ -77,8 +77,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
 <style lang="scss">
 // scoped: 作用域 样式只影响当前组件中书写的元素
 // 小圆点属于 swiper 组件内部子元素

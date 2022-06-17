@@ -36,9 +36,12 @@ router.get("/list", (req, res, next) => {
     pool.query("select * from py_camera", (err, result) => {
       // 分页处理
       let pro = result;
+      // 拼接好后的数据
       let arr = [];
+      // 页数
+      let page = 1;
       // 循环截取
-      for (var i = 0, page = 1; i < result.length; i += 6) {
+      for (var i = 0; i < result.length; i += 6) {
         let temp = pro.slice(i, i + 6);
         // console.log(temp);
         for (let i = 0; i < temp.length; i++) {
@@ -54,7 +57,7 @@ router.get("/list", (req, res, next) => {
       }
       // 判断长度 确定是否有值
       if (result.length) {
-        res.send({ code: 1, msg: "ok", data: arr });
+        res.send({ code: 1, msg: "ok", data: { data: arr } });
       } else {
         res.send({ code: 0, msg: "服务器端错误" });
       }

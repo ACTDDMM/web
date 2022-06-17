@@ -9,9 +9,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: rgb(247, 237, 237);
-}
 /* 中间商品展示部分 */
 .content {
   width: 1200px;
@@ -53,7 +50,7 @@ body {
   white-space: nowrap;
 }
 
-.content .content-rigth {
+.content-rigth {
   width: 1000px;
   height: 100%;
   padding: 10px;
@@ -65,32 +62,32 @@ body {
   align-content: flex-start;
   background-color: rgb(245, 246, 250);
 }
-.content .content-rigth .product-content {
+.content-rigth .product-content {
   width: 220px;
   height: 300px;
   background-color: #fff;
   padding: 8px;
   display: flex;
   flex-direction: column;
-  margin: 11px; 
+  margin: 11px;
   border: 2px solid #fff;
 }
-.content .content-rigth .product-content:hover{
+.content-rigth .product-content:hover {
   border: 2px solid #eee;
 }
 
-.content .content-rigth .product-content .pro_img img {
+.content-rigth .product-content .pro_img img {
   width: 100%;
 }
-.content .content-rigth .product-content .pro_text {
+.content-rigth .product-content .pro_text {
   text-align: center;
   font-weight: 100;
 }
-.content .content-rigth .product-content .pro_text a {
+.content-rigth .product-content .pro_text a {
   text-decoration: none;
   color: black;
 }
-.content .content-rigth .product-content .pro_text a > span:nth-child(1) {
+.content-rigth .product-content .pro_text a > span:nth-child(1) {
   display: block;
   height: 50px;
   line-height: 50px;
@@ -98,7 +95,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.content .content-rigth .product-content .pro_text h4 {
+.content-rigth .product-content .pro_text h4 {
   font-weight: 500;
 }
 

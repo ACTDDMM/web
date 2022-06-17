@@ -1,24 +1,17 @@
 <template>
   <div>
-   <my-header></my-header>
-   <router-view/>
-    <my-footer></my-footer>
+    <my-header />
+    <router-view />
+    <my-footer />
   </div>
 </template>
 
 <script>
-import MyFooter from './components/MyFooter.vue'
-
-import  './assets/css/style.css';
-
-import MyHeader from './components/MyHeader.vue';
-  export default {
-  components: { MyFooter, MyHeader },
-    
-  }
- 
+import MyFooter from "./components/MyFooter.vue";
+import MyHeader from "./components/MyHeader.vue";
+export default {
+  components: { MyHeader, MyFooter },
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
