@@ -7,27 +7,23 @@
         ref="swiper"
         class="swiper"
         :options="swiperOptions"
+        v-if="data"
       >
-        <swiper-slide class="swiper-lunbo">
-          <img src="/img/index/carousel/1.jpg" alt="" />
+        <swiper-slide class="swiper-lunbo" v-for="{cid,img} in data.data.carousel" :key="cid">
+          <img :src="`${img}`" alt="" />
         </swiper-slide>
-        <swiper-slide class="swiper-lunbo">
-          <img src="/img/index/carousel/2.jpg" alt="" />
-        </swiper-slide>
-        <swiper-slide class="swiper-lunbo">
-          <img src="/img/index/carousel/3.jpg" alt="" />
-        </swiper-slide>
-        <swiper-slide class="swiper-lunbo">
-          <img src="/img/index/carousel/4.jpg" alt="" />
-        </swiper-slide>
+       
         <!-- 分页器: 必须放入对应插槽中 -->
         <div class="swiper-pagination" slot="pagination"></div>
         <!-- 左右箭头: 必须放在对应的插槽中 -->
       </swiper>
     </div>
-    <div>
-      <index-floor></index-floor>
-    </div>
+    
+    <template v-if="data">
+      <index-floor :items="data.data.indexproduct"></index-floor>
+    </template>
+     
+    
   </div>
 </template>
 
@@ -73,11 +69,24 @@ export default {
       this.$refs.swiper.$swiper.autoplay.start();
     },
     // 发送请求
+    getdata(){
+      let url="/product/indata"
+      this.axios.get(url).then((res)=>{
+        console.log(res)
+        this.data=res.data
+      })
+    },
+   
+  },
+  mounted () {
+    this.getdata();
+   
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
 <style lang="scss">
 // scoped: 作用域 样式只影响当前组件中书写的元素
 // 小圆点属于 swiper 组件内部子元素

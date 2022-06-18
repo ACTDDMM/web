@@ -40,6 +40,7 @@ ul {
 }
 .container-input input {
   width: 400px;
+  /* height: 30px; */
   margin-left: 100px;
   line-height: 30px;
   padding: 5px;
@@ -65,18 +66,42 @@ ul {
   background-color: red;
 }
 .container-right {
-  float: right;
-  width: 200px;
+ 
+  width: 300px;
 }
 
 .container-right ul {
+  /* border: 1px solid #333; */
   display: flex;
   justify-content: space-around;
+  height: 90px;
+
 }
+.container-right ul li {
+ padding: 5px;
+ margin-top: -10px;
+}
+
 .container-right ul li a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+ line-height: 90px;
+ display: block;
+ 
+  
+}
+.container-right ul li img{
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+
+  margin-top: 40px;
+}
+.container-right ul li p{
+  margin-top: -70px;
+  /* margin-right: 10px; */
+  /* border: 1px solid #333; */
 }
 a {
   text-decoration: none;
@@ -92,11 +117,7 @@ a {
   width: 1200px;
   background-color: #f5f6f9;
 }
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
+
 
 .my-footer {
   width: 100%;
@@ -104,23 +125,27 @@ a {
 .footer {
   width: 100%;
 
-  height: 300px;
+ 
 }
 
 .first-footer {
   border: 1px solid gainsboro;
   display: flex;
-  justify-content: space-evenly;
+   justify-content: space-evenly; 
   background-color: #fefefe;
   width: 100%;
+  /* border: 1px solid #333; */
 }
 
-.first-footer ul {
-  list-style: none;
-  width: 150px;
+.first-footer div {
+ 
+  width: 200px;
+  margin-top: 20px;
+  /* border: 1px solid #333; */
 }
-.first-footer ul li {
-  margin-top: 10px;
+.first-footer>div>p {
+  display: block;
+ padding: 10px;
   text-align: center;
 }
 .second-footer {
@@ -132,19 +157,25 @@ a {
   display: flex;
   justify-content: center;
   list-style: none;
+  /* border: 1px solid #333; */
 }
 
 .second-footer-first ul li a {
   text-decoration: none;
+  display: inline-block;
   color: #333;
-  margin: 0 9px;
+  margin: 5px 9px;
 }
 .second-footer-first ul li a:hover {
   color: #fbb111;
 }
 .third-footer {
-  margin: 0 auto;
+  margin: 10px auto;
   width: 1200px;
+  /* border: 1px solid #333; */
+}
+.third-footer p{
+  padding: 10px;
 }
 .clearfix {
   *zoom: 1;

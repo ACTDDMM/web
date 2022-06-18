@@ -26,10 +26,22 @@
             </button>
           </div>
           <div class="container-right">
-            <ul>
-              <li><a>登录</a></li>
+            <ul v-if="!uname" >
+              <li ><a href="">登录</a></li>
               <li><a href="">注册</a></li>
-              <li><a href="">购物车</a></li>
+             
+            
+            </ul>
+            <ul class="container-right" v-if="uname">
+              <li>
+               <!-- <iframe src="circle1.svg"></iframe> -->
+              <!-- <embed src="../assets/css/tou.svg" type="image/svg+xml" /> -->
+                <img src="/img/index/个人头像_o.png" alt="">
+                <a href=""><p>欢迎{{uname}}</p></a>
+              </li>
+              <li><a href="">退出登录</a></li>
+               <li><a href="">购物车</a></li>
+               
             </ul>
           </div>
           <div class="clear"></div>
@@ -54,7 +66,7 @@
             <el-menu-item index="3">服务与支持</el-menu-item>
             <el-menu-item index="4">新品推荐</el-menu-item>
             <el-menu-item index="5">联系我们</el-menu-item>
-            <el-submenu index="6">
+            <el-submenu index="6" v-show="uname">
               <template slot="title">个人中心</template>
               <el-menu-item index="6-1">修改个人信息</el-menu-item>
               <el-menu-item index="6-2">个人订单查询</el-menu-item>
@@ -68,6 +80,7 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   data() {
     return {
@@ -81,6 +94,9 @@ export default {
       }
     },
   },
+  computed: {
+    ...mapState(['uname'])
+    },
 };
 </script>
 

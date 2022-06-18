@@ -76,6 +76,7 @@
 .index-floor3 .floor-content2 > img {
   width: 100%;
   border-radius: 8px;
+  height:200px ;
 }
 
 .index-floor4 {
@@ -134,12 +135,12 @@
 .floor-content3-contanier > p {
   padding: 10px 0px;
   text-align: center;
-}
-.floor-content3-contanier > p:first-child {
+  overflow: hidden;
   white-space: nowrap;
-  font-weight: 900;
-  font-size: 20px;
+  text-overflow: ellipsis;
+  width: 250px;
 }
+
 .floor-content3-contanier > p:nth-child(3) {
   font-weight: 900;
   font-size: 18px;
@@ -148,6 +149,11 @@
   background-color: #fefefe;
   padding: 5px;
   width: 230px;
+}
+.floor-content4 p{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .index-floor5 {
   margin: 30px auto;

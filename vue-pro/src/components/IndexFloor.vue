@@ -34,53 +34,48 @@
 
       <div class="floor-content1">
         <div class="floor-content1-item">
-          <img src="/img/index/1.jpeg" alt="" />
+          <img :src="'/img/index/product/'+items[0].pic" alt="" />
 
           <p class="item1">
-            尼康（Nikon） 尼康(Nikon)D3500数码单反相机
-            入门级高清数码家用旅游照相机
+           {{items[0].title}}
           </p>
-          <p class="item2">¥7499.00</p>
+          <p class="item2">¥{{items[0].price}}</p>
         </div>
 
         <div class="floor-content1-item">
-          <img src="/img/index/1.jpeg" alt="" />
+          <img :src="'/img/index/product/'+items[1].pic"  alt="" />
 
           <p class="item1">
-            尼康（Nikon） 尼康(Nikon)D3500数码单反相机
-            入门级高清数码家用旅游照相机
+          {{items[1].title}}
           </p>
-          <p class="item2">¥7499.00</p>
+          <p class="item2">¥{{items[1].price}}</p>
         </div>
 
         <div class="floor-content1-item">
-          <img src="/img/index/1.jpeg" alt="" />
+          <img :src="'/img/index/product/'+items[2].pic"  alt="" />
 
           <p class="item1">
-            尼康（Nikon） 尼康(Nikon)D3500数码单反相机
-            入门级高清数码家用旅游照相机
+           {{items[2].title}}
           </p>
-          <p class="item2">¥7499.00</p>
+          <p class="item2">¥{{items[2].price}}</p>
         </div>
 
         <div class="floor-content1-item">
-          <img src="/img/index/1.jpeg" alt="" />
+          <img :src="'/img/index/product/'+items[3].pic"  alt="" />
 
           <p class="item1">
-            尼康（Nikon） 尼康(Nikon)D3500数码单反相机
-            入门级高清数码家用旅游照相机
+             {{items[3].title}}
           </p>
-          <p class="item2">¥7499.00</p>
+          <p class="item2">¥{{items[3].price}}</p>
         </div>
 
         <div class="floor-content1-item">
-          <img src="/img/index/1.jpeg" alt="" />
+          <img :src="'/img/index/product/'+items[4].pic"  alt="" />
 
           <p class="item1">
-            尼康（Nikon） 尼康(Nikon)D3500数码单反相机
-            入门级高清数码家用旅游照相机
+            {{items[4].title}}
           </p>
-          <p class="item2">¥7499.00</p>
+          <p class="item2">¥{{items[4].price}}</p>
         </div>
       </div>
     </div>
@@ -90,10 +85,10 @@
         <img src="/img/index/楼层2.jpeg" alt="" />
       </div>
       <div class="floor-content2">
-        <img src="/img/index/楼层2.jpeg" alt="" />
+        <img src="/img/index/indexfloor1.jpeg" alt="" />
       </div>
       <div class="floor-content2">
-        <img src="/img/index/楼层2.jpeg" alt="" />
+        <img src="/img/index/indexfloor3.jpeg" alt="" />
       </div>
     </div>
     <div class="index-floor4">
@@ -101,27 +96,24 @@
       <div class="index-floor-item">
         <div class="floor-content3">
           <div class="floor-content3-item">
-            <img class="imgbig" src="/img/index/1.jpeg" alt="" />
+            <img class="imgbig" :src="'/img/index/product/'+items[5].pic"   alt="" />
           </div>
           <div class="floor-content3-contanier">
-            <p>尼康D3500数码单反相机</p>
-
-            <p>内容</p>
-
-            <p>¥7499.00</p>
+            <p> {{items[5].title}}</p>
+            <p>¥{{items[5].price}}</p>
             <p><a href="">查看详情</a></p>
           </div>
         </div>
         <div  class="floor-content4">
-          <img class="imgsm" src="/img/index/1.jpeg" alt="" />
-          <p>尼康D3500数码单反相机</p>
-          <p>¥7499.00</p>
+          <img class="imgsm" :src="'/img/index/product/'+items[6].pic"  alt="" />
+          <p>{{items[6].title}}</p>
+          <p>¥{{items[6].price}}</p>
           <p><a href="">查看详情</a></p>
         </div>
         <div class="floor-content4">
-          <img class="imgsm" src="/img/index/1.jpeg" alt="" />
-          <p>尼康D3500数码单反相机</p>
-          <p>¥7499.00</p>
+          <img class="imgsm" :src="'/img/index/product/'+items[7].pic"  alt="" />
+          <p>{{items[7].title}}</p>
+          <p>¥{{items[7].price}}</p>
           <p><a href="">查看详情</a></p>
         </div>
       </div>
@@ -138,10 +130,12 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props:['items']
+};
 </script>
 
 <style lang="scss" scoped>
 </style>
 <style scoped src="../assets/css/indexfloor.css">
-</style>
+</style> 
