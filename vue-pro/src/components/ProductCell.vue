@@ -2,7 +2,7 @@
   <div>
     <div class="product-content">
       <div class="pro_img">
-        <img :src="`/img/products/${p.c_img}`" alt="" />
+        <img :src="'/img/products/' + p.c_img" alt="" />
       </div>
       <div class="pro_text">
         <router-link :to="`/product/detail/${p.c_id}`">
@@ -18,9 +18,6 @@
 import "../assets/css/products_list.css";
 export default {
   props: ["p"],
-  mounted() {
-    console.log(this.p);
-  },
 };
 </script>
 

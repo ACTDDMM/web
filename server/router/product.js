@@ -20,13 +20,33 @@ router.get("/list", (req, res, next) => {
       "select * from py_camera where c_category=?",
       [obj.kw],
       (err, result) => {
+        let pro = result;
+        // 拼接好后的数据
+        let arr = [];
+        // 页数
+        let page = 1;
+        // 循环截取
+        for (var i = 0; i < result.length; i += 6) {
+          let temp = pro.slice(i, i + 6);
+          // console.log(temp);
+          for (let i = 0; i < temp.length; i++) {
+            // console.log(i);
+            temp[i]["page"] = page;
+            arr.push(temp[i]);
+          }
+          page++;
+        }
         if (err) {
           next(err);
           return;
         }
         // 判断长度 确定是否有值
         if (result.length) {
-          res.send({ code: 1, msg: "ok", data: result });
+          res.send({
+            code: 1,
+            msg: "ok",
+            data: { data: arr, pagecount: page - 1, pagesize: 6 },
+          });
         } else {
           res.send({ code: 0, msg: "服务器端错误" });
         }
@@ -51,13 +71,18 @@ router.get("/list", (req, res, next) => {
         }
         page++;
       }
+
       if (err) {
         next(err);
         return;
       }
       // 判断长度 确定是否有值
       if (result.length) {
-        res.send({ code: 1, msg: "ok", data: { data: arr } });
+        res.send({
+          code: 1,
+          msg: "ok",
+          data: { data: arr, pagecount: page - 1, pagesize: 6 },
+        });
       } else {
         res.send({ code: 0, msg: "服务器端错误" });
       }

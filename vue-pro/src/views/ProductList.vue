@@ -43,9 +43,12 @@
         <product-cell v-for="x in data" :p="x" :key="x.c_id" />
         <!-- 分页 -->
         <div class="paging" v-if="data">
-          <span>上一页</span>
-          <span v-for="n in data.pagecount" :key="n">{{ n }}</span>
-          <span>下一页</span>
+          <span
+            @click="getCameraList(n)"
+            v-for="n in result.pagecount"
+            :key="n"
+            >{{ n }}</span
+          >
         </div>
       </div>
     </div>
@@ -60,7 +63,6 @@ export default {
   mounted() {
     this.getCameraList();
     this.getNewCamera();
-    console.log(this.data);
   },
   watch: {
     serval() {
@@ -71,14 +73,28 @@ export default {
     return {
       data: null,
       newCamera: null,
+      result: null,
+      pno: [],
     };
   },
   methods: {
-    getCameraList() {
+    getCameraList(n = 1) {
       let url = `http://127.0.0.1:3000/product/list?kw=` + this.serval;
       this.axios.get(url).then(res => {
-        this.data = res.data.data;
+        console.log(res);
+        let result = [];
+        for (let i = 1; i <= res.data.data.pagecount; i++) {
+          this.pno.push(i);
+        }
+        console.log(this.pno);
+        res.data.data.data.forEach(value => {
+          if (value.page == n) {
+            result.push(value);
+          }
+        });
+        this.data = result;
         console.log(this.data);
+        this.result = res.data.data;
       });
     },
     getNewCamera() {

@@ -242,6 +242,7 @@ li a:hover {
 }
 
 .central-body {
+  background: url("../bg_purple.png");
   /*    width: 100%;*/
   padding: 17% 5% 10% 5%;
   text-align: center;
