@@ -1,0 +1,16 @@
+.app {
+  width: 1200px;
+  margin: 0 auto;
+}
+.shopcart {
+  margin: 20px 0px;
+}
+.el-table__row {
+  height: 80px;
+}
+.cell img {
+  width: 100px;
+}
+.el-table .cell {
+  text-align: center;
+}

@@ -1,15 +1,21 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import NotFound from "../views/NotFound.vue";
-import Index from '../views/Index.vue';
+import Index from "../views/Index.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
+  // 购物车路由
   {
-    path: '/',
-    name: 'index',
-    component:Index 
+    path: "/shopcart",
+    name: "shopcart",
+    component: () => import("../views/ShoppingCart.vue"),
+  },
+  {
+    path: "/",
+    name: "index",
+    component: Index,
   },
   {
     // 参数可选
