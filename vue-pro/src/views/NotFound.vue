@@ -1,5 +1,5 @@
 <template>
-  <div class="stars" style="background: url('../assets/bg_purple.png')">
+  <div class="stars">
     <div class="central-body">
       <img class="image-404" src="/img/notfound/404.svg" width="300px" />
       <router-link to="/" class="btn-go-home" target="_blank"
