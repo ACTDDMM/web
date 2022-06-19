@@ -143,10 +143,16 @@ a {
   margin-top: 20px;
   /* border: 1px solid #333; */
 }
+
 .first-footer>div>p {
-  display: block;
+  /* display: block; */
  padding: 10px;
   text-align: center;
+  font-size: 14px;
+}
+.first-footer>div>p:first-child{
+  font-size: 18px;
+  font-weight: bold;
 }
 .second-footer {
   width: 100%;
