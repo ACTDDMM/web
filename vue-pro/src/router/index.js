@@ -25,6 +25,16 @@ const routes = [
     component: () => import("../views/ProductList.vue"),
   },
   {
+    //商品详情页
+    path: "/pd/:id",
+    name: "ProductDetails",
+    props: true,
+    component: () => import("../views/ProductDetails.vue"),
+    meta: {
+      title: "商品详情",
+    },
+  },
+  {
     path: "*",
     name: "404",
     component: NotFound,
@@ -40,6 +50,14 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
+});
+
+//添加全局前置守位
+//凡是路由的跳转操作，都会触发守卫
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title;
+
+  next(); //放行：让路由继续后续工作
 });
 
 export default router;
