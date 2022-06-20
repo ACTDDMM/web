@@ -6,6 +6,24 @@ import Index from "../views/Index.vue";
 Vue.use(VueRouter);
 
 const routes = [
+  // 登录
+  {
+    path: "/login",
+    name: "login",
+    meta: {
+      isshow: true,
+    },
+    component: () => import("../views/LoginView.vue"),
+  },
+  // 注册
+  {
+    path: "/reg",
+    name: "register",
+    meta: {
+      isshow: true,
+    },
+    component: () => import("../views/RegView.vue"),
+  },
   // 购物车路由
   {
     path: "/shopcart",

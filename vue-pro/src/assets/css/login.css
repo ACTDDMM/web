@@ -16,7 +16,7 @@
 body {
   align-items: center;
   background-color: var(--white);
-  background: url(../img/login/910069304830984235.png);
+  background: url(../bg.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -71,7 +71,7 @@ body {
 
 .overlay {
   background-color: var(--lightblue);
-  background: url(../img/login/910069304830984235.png);
+  background: url(../bg.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
