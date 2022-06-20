@@ -185,9 +185,25 @@ insert into py_camera_family values(7,'leica');
 
 -- #商品表
 
-insert into
-    py_camera
-values(
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
         null,
         1,
         'canon',
@@ -204,9 +220,25 @@ values(
         '3800-4500万'
     );
 
-insert into
-    py_camera
-values(
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
         null,
         2,
         'nikon',
@@ -223,9 +255,25 @@ values(
         '3000-3500万'
     );
 
-insert into
-    py_camera
-values(
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
         null,
         3,
         'panasonic',
@@ -242,9 +290,25 @@ values(
         '3000-4000万'
     );
 
-insert into
-    py_camera
-values(
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
         null,
         4,
         'hasselblad',
@@ -261,9 +325,25 @@ values(
         '3000-5500万'
     );
 
-insert into
-    py_camera
-values(
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
         null,
         5,
         'sony',
@@ -280,9 +360,25 @@ values(
         '3000-3800万'
     );
 
-insert into
-    py_camera
-values(
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
         null,
         6,
         'Fujifilm',
@@ -299,9 +395,25 @@ values(
         '4000-4500万'
     );
 
-insert into
-    py_camera
-values(
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
         null,
         7,
         'leica',
@@ -318,9 +430,25 @@ values(
         '3000-4000万'
     );
 
-insert into
-    py_camera
-values(
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
         null,
         1,
         'canon',
@@ -337,9 +465,25 @@ values(
         '3800-4500万'
     );
 
-insert into
-    py_camera
-values(
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
         null,
         1,
         'canon',
@@ -356,9 +500,25 @@ values(
         '3000-4000万'
     );
 
-insert into
-    py_camera
-values(
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
         null,
         5,
         'sony',
@@ -375,9 +535,25 @@ values(
         '3000-3800万'
     );
 
-insert into
-    py_camera
-values(
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
         null,
         6,
         'Fujifilm',
@@ -413,14 +589,14 @@ INSERT INTO
     )
 VALUES
     (
-        NULL,
-        '2',
+        null,
+        2,
         'nikon',
-        '17598.00',
+        17598.00,
         '尼康(Nikon)Z 6 (Z6 )全画幅微单相机 数码相机 微单机身 Vlog相 Z5系列 Z5+24-50mm FX高入门套装',
         '1f3a8636e1fdcd00.jpg',
-        '200',
-        '1655205451519',
+        200,
+        1655205451519,
         '尼康(Nikon)Z 6 ',
         '微单相机',
         '全画幅',
@@ -448,14 +624,14 @@ INSERT INTO
     )
 VALUES
     (
-        NULL,
-        '2',
+        null,
+        2,
         'nikon',
-        '7499.00',
+        7499.00,
         '尼康(Nikon) Zfc半画幅复古微单相机 高清旅游数码照相机 Z16-50/Z28 2.8套机 Z fc+Z16-50 f/3.5-6.3VR镜头 标配【送64G卡+相机包+UV等基础配件】',
         '202be185de428bf9.jpg',
-        '20',
-        '1655205451519',
+        20,
+        1655205451519,
         '尼康(Nikon)Z fc',
         '微单相机',
         'APS-C',
@@ -483,14 +659,14 @@ INSERT INTO
     )
 VALUES
     (
-        NULL,
-        '7',
+        null,
+        7,
         'leica',
-        '113550.00',
+        113550.00,
         '徕卡(Leica)M11旁轴数码相机套装 相机+35 1.4镜头银色+电池',
         'a6c9164605fb698e.jpg',
-        '10',
-        '1655205451519',
+        10,
+        1655205451519,
         '徕卡M11',
         '数码相机',
         '全画幅',
@@ -518,14 +694,14 @@ INSERT INTO
     )
 VALUES
     (
-        NULL,
-        '7',
+        null,
+        7,
         'leica',
-        '11800.00',
+        11800.00,
         '徕卡(Leica)D-LUX7时尚多功能便携相机套装徕卡dlux7套装微单相机入门【非现货需预定】 相机+相机包(棕色) 相机-银色',
         '1eceea7214786956.jpg',
-        '35',
-        '1655205451519',
+        35,
+        1655205451519,
         '徕卡(Leica)D-LUX7',
         '微单相机',
         '全画幅',
@@ -553,14 +729,14 @@ INSERT INTO
     )
 VALUES
     (
-        NULL,
-        '3',
+        null,
+        3,
         'panasonic',
-        '3498.00',
+        3498.00,
         '松下(Panasonic)DMC-LX10数码相机4K高清摄像照相机大光圈口袋机 翻转触摸屏 官方标配',
         '12c594a93692a030.jpg',
-        '10',
-        '1655205451519',
+        10,
+        1655205451519,
         '松下(panasonic)DMC-LX10',
         '数码相机',
         '全画幅',
@@ -588,14 +764,14 @@ INSERT INTO
     )
 VALUES
     (
-        NULL,
-        '4',
+        null,
+        4,
         'hasselblad',
-        '48989.00',
+        48989.00,
         '哈苏(HASSELBLAD) X1D II 50C中画幅无反数码相机 微单 自动对焦 二代 哈苏X1D2+XCD45P镜头',
         'c119ed106ad50b28.jpg',
-        '5',
-        '1655205451519',
+        5,
+        1655205451519,
         '哈苏(HASSELBLAD)',
         '数码相机',
         '中画幅',
@@ -603,6 +779,463 @@ VALUES
         '2K 30P,1080P 60P',
         '5000-6000万'
     );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        5,
+        'sony',
+        2058.00,
+        'SONY 索尼DSC-H300长焦数码相机 家用旅游照相机2010万像素 35倍光学变焦',
+        '5234c72a3f41da2dabb8466a134571ff.jpeg',
+        68,
+        1655625932154,
+        'SONY 索尼 DSC-H300',
+        '数码相机',
+        '全画幅',
+        '6bit',
+        '无视频输出',
+        '2010万'
+    );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        2,
+        'nikon',
+        6299.00,
+        '尼康(Nikon) D5600数码单反相机 高清家用旅游数码相机 反转触摸屏 尼康18-140VR',
+        '7492aeee5d158b6e8c1feba00ba135d3.jpg',
+        80,
+        1655626852271,
+        '尼康(Nikon)D5600',
+        '数码相机',
+        'APS-C',
+        '14bit',
+        '1080P 60P',
+        '2416万'
+    );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        2,
+        'nikon',
+        27199.00,
+        '尼康(Nikon) D850 高端全画幅旗舰单反相机 高清数码相机 ',
+        'c0b4d73039a5cc0a327d3ac80ba19cc85.jpeg',
+        98,
+        1655627964255,
+        '尼康(Nikon)D850',
+        '单反相机',
+        '全画幅',
+        '14bit',
+        '4k 30p 1080p 60p',
+        '3000万-4000万'
+    );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        1,
+        'canon',
+        6399.00,
+        '佳能(Canon) 80D套机单机eos80d单反照相机',
+        'e8d65902d92fa44707070f6a2db670de.jpeg',
+        165,
+        1655628711808,
+        '佳能(Canon)80D',
+        '单反相机',
+        'APS-C',
+        '6bit',
+        '1080p 60p',
+        '2420万'
+    );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        3,
+        'panasonic',
+        9998.00,
+        '松下(Panasonic)S5全画幅数码相机',
+        '8d0748f4e5ded5ba930b5ffde14bea90.jpeg',
+        153,
+        1655629131280,
+        '松下(panasonic)S5',
+        '数码相机',
+        '全画幅',
+        '14bit',
+        '4k视频',
+        '2000万-3000万'
+    );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        3,
+        'panasonic',
+        13298.00,
+        '松下(Panasonic)GH6 微单/单电无反数码相机',
+        '2f14c6c36bc2fe0068542c9bd3f1eeff.jpeg',
+        35,
+        1655629544476,
+        '松下(panasonic)GH6',
+        '数码相机',
+        '全画幅',
+        '14bit',
+        '1080p 60p',
+        '2000万-3000万'
+    );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        5,
+        'sony',
+        11899.00,
+        '索尼(SONY)Alpha7C全画幅微单数码相机',
+        '72567e76dee9e973b701f2736e739092.jpeg',
+        58,
+        1655630004855,
+        '索尼(SONY)Alpha 7C',
+        '数码相机',
+        '全画幅',
+        '14bit',
+        '1080p 60p',
+        '2000万-3000万'
+    );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        4,
+        'hasselblad',
+        73900.00,
+        '哈苏(HASSELBLAD)907X850C中画幅数码相机+CFVII CFV2后背907X 50C普通版',
+        '89122f2603136110478660adccec1a47.jpeg',
+        19,
+        1655630585249,
+        '哈苏(HASSELBLAD)',
+        '数码相机',
+        '中画幅',
+        '不支持RAW',
+        '2k 30p',
+        '5000万-6000万'
+    );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        7,
+        'leica',
+        9900.00,
+        '徕卡(Leica)V_LUX5便携相机大变镜头 4k视频快速对焦人文扫街触屏可翻转',
+        '9758f03e8c2a927cb39fd288cbfa9111.jpeg',
+        74,
+        1655631060760,
+        '徕卡(Leica)V-LUX5',
+        '数码相机',
+        '全画幅',
+        '6bit',
+        '4k视频',
+        '2000万'
+    );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        6,
+        'Fujifilm',
+        39800.00,
+        '富士(FUJIFILM)GFX100S无反中画幅相机 微单相机',
+        '7440e33b59efd5d5a40b0a34e51ed053.jpeg',
+        26,
+        1655648220537,
+        '富士(FUJIFILM)GFX100S',
+        '数码相机',
+        '中画幅',
+        '16bit',
+        '1080p 60p',
+        '10000万'
+    );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        6,
+        'Fujifilm',
+        10549.00,
+        '富士(FUJIFILM)X-S10/XS10复古微单数码相机',
+        'f1957cdb7a1440434589552cde20eb02.jpeg',
+        19,
+        1655648846155,
+        '富士(FUJIFILM)X-S!0',
+        '数码相机',
+        'APS-C',
+        '14bit',
+        '4k视频',
+        '2000万-3000万'
+    );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        2,
+        'nikon',
+        8799.00,
+        '尼康(Nikon)Z 5全画幅微单相机 数码相机',
+        'f9478bca191e7fce780f349a1bcc2e1fc.jpeg',
+        96,
+        1655649278234,
+        '尼康(Nikon)Z5',
+        '数码相机',
+        '全画幅',
+        '14bit',
+        '4k视频',
+        '2000万-3000万'
+    );
+
+INSERT INTO
+    `py_camera` (
+        `c_id`,
+        `c_family_id`,
+        `c_category`,
+        `c_price`,
+        `c_title`,
+        `c_img`,
+        `c_stock`,
+        `c_shelf_time`,
+        `c_name`,
+        `c_type`,
+        `c_frame`,
+        `c_output`,
+        `c_shooting`,
+        `c_pixel`
+    )
+VALUES
+    (
+        null,
+        1,
+        'canon',
+        12799.00,
+        '佳能(Canon)EOSR专微微单相机相机微单套机全画幅微单EOSR',
+        NULL,
+        83,
+        1655649828538,
+        '佳能EOSR',
+        '数码相机',
+        '全画幅',
+        '14bit',
+        '4k视频',
+        '2000万-3000万'
+    );
+
+-- 首页商品
 
 insert into
     py_index_carousel
