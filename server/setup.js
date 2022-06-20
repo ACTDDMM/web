@@ -12,6 +12,8 @@ const adminRouter = require("./router/admin");
 const productRouter = require("./router/product");
 // 引入路由 -- index
 const indexRouter = require("./router/index");
+// 引入路由 -- shopcart
+const shopcartRouter = require("./router/shopcart");
 
 // 创建服务器
 const app = express();
@@ -53,6 +55,8 @@ app.use("/product", productRouter);
 
 // 首页数据  /index 前缀
 app.use("/index", indexRouter);
+// 购物车  /shopcart 前缀
+app.use("/shopcart", shopcartRouter);
 
 // 错误处理中间件
 app.use((err, req, res, next) => {

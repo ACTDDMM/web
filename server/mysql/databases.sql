@@ -165,6 +165,13 @@ CREATE TABLE py_order_detail(
     count int
 );
 
+-- 模拟数据
+
+INSERT INTO
+    `py_shopping_cart` (`cid`, `user_id`, `camera_id`, `count`)
+VALUES
+    (NULL, '1', '1', '2');
+
 -- # 插入数据
 
 insert into py_admin values(null,'admin','123456');

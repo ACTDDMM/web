@@ -112,7 +112,7 @@ router.get("/single/:c_id", (req, res, next) => {
   });
 });
 
-// 3.新品推荐 前5条
+// 3.新品推荐 前3条
 // 请求方式 get
 // http://127.0.0.1:3000/product/newcamera
 router.get("/newcamera", (req, res, next) => {
