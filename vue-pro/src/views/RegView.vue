@@ -8,6 +8,10 @@
       label-width="100px"
       class="demo-ruleForm"
     >
+      <h1>用户注册</h1>
+      <el-form-item label="用户名" prop="username">
+        <el-input v-model="ruleForm.username" autocomplete="off"></el-input>
+      </el-form-item>
       <el-form-item label="密码" prop="pass">
         <el-input
           type="password"
@@ -22,13 +26,17 @@
           autocomplete="off"
         ></el-input>
       </el-form-item>
-      <el-form-item label="年龄" prop="age">
-        <el-input v-model.number="ruleForm.age"></el-input>
+
+      <el-form-item label="手机号" prop="phone">
+        <el-input v-model="ruleForm.phone"></el-input>
       </el-form-item>
+      <el-form-item label="邮箱" prop="email">
+        <el-input v-model="ruleForm.email"></el-input>
+      </el-form-item>
+
       <el-form-item>
-        <el-button type="primary" @click="submitForm('ruleForm')"
-          >提交</el-button
-        >
+        <el-button type="primary" @click="submitForm(ruleForm)">提交</el-button>
+
         <el-button @click="resetForm('ruleForm')">重置</el-button>
       </el-form-item>
     </el-form>
@@ -38,22 +46,24 @@
 <script>
 export default {
   data() {
-    var checkAge = (rule, value, callback) => {
+    var checkUsername = (rule, value, callback) => {
       if (!value) {
-        return callback(new Error("年龄不能为空"));
+        return callback(new Error("用户名不能为空"));
       }
-      setTimeout(() => {
-        if (!Number.isInteger(value)) {
-          callback(new Error("请输入数字值"));
-        } else {
-          if (value < 18) {
-            callback(new Error("必须年满18岁"));
-          } else {
-            callback();
-          }
-        }
-      }, 1000);
     };
+
+    var checkEamil = (rule, value, callback) => {
+      if (!value) {
+        return callback(new Error("邮箱不能为空"));
+      }
+    };
+
+    var checkPhone = (rule, value, callback) => {
+      if (!value) {
+        return callback(new Error("手机号不能为空"));
+      }
+    };
+
     var validatePass = (rule, value, callback) => {
       if (value === "") {
         callback(new Error("请输入密码"));
@@ -64,6 +74,7 @@ export default {
         callback();
       }
     };
+
     var validatePass2 = (rule, value, callback) => {
       if (value === "") {
         callback(new Error("请再次输入密码"));
@@ -75,25 +86,33 @@ export default {
     };
     return {
       ruleForm: {
+        username: "",
         pass: "",
         checkPass: "",
-        age: "",
+        phone: "",
+        email: "",
       },
       rules: {
+        username: [{ validator: checkUsername, trigger: "blur" }],
         pass: [{ validator: validatePass, trigger: "blur" }],
         checkPass: [{ validator: validatePass2, trigger: "blur" }],
-        age: [{ validator: checkAge, trigger: "blur" }],
+        phone: [{ validator: checkPhone, trigger: "blur" }],
+        email: [{ validator: checkEamil, trigger: "blur" }],
       },
     };
   },
   methods: {
     submitForm(formName) {
-      this.$refs[formName].validate((valid) => {
-        if (valid) {
-          alert("submit!");
+      console.log(formName);
+      let params = `u_name=${formName.username}&u_pwd=${formName.pass}&u_phone=${formName.phone}&u_email=${formName.email}`;
+      let url = "/user/register";
+      this.axios.post(url, params).then(res => {
+        console.log(res);
+        if (res.data.code == 1) {
+          alert(res.data.msg);
+          this.$router.push("/login");
         } else {
-          console.log("error submit!!");
-          return false;
+          alert(res.msg);
         }
       });
     },
@@ -126,11 +145,11 @@ export default {
 }
 .demo-ruleForm {
   width: 350px;
-  height: 200px;
+  height: 500px;
   padding: 20px;
 }
 .el-form-item {
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 .el-button {
   width: 70px;
