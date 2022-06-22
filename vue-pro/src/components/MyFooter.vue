@@ -2,8 +2,7 @@
   <div class="my-footer">
     <div class="footer">
       <div class="first-footer">
-      
-          <!-- <li><h3>购物指南</h3></li>
+        <!-- <li><h3>购物指南</h3></li>
           <li>顾客必读</li>
           <li>订单的几种状态</li>
           <li>商品退货保障</li>
@@ -41,19 +40,19 @@
           <p>订单的几种状态</p>
           <p>商品退货保障</p>
         </div>
-         <div>
+        <div>
           <p>配送方式</p>
           <p>送货方式</p>
           <p>上门自提</p>
           <p>到货时间</p>
         </div>
-          <div>
+        <div>
           <p>支付方式?</p>
           <p>支付方式</p>
           <p>订单何时出库？</p>
           <p>网上支付小贴士</p>
         </div>
-         <div>
+        <div>
           <p>售后服务</p>
           <p>正品行货</p>
           <p>关于价格</p>
@@ -83,7 +82,13 @@
 </template>
 
 <script>
-export default {};
+
+export default {
+  data() {
+    return {
+    };
+  },
+};
 </script>
 
 <style scoped src="../assets/css/style.css"></style>

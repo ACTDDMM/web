@@ -26,22 +26,19 @@
             </button>
           </div>
           <div class="container-right">
-            <ul v-if="!uname" >
-              <li ><a href="">登录</a></li>
-              <li><a href="">注册</a></li>
-             
-            
+            <ul v-if="!this.$store.state.loginStatus">
+              <li><router-link to="/login">登录</router-link></li>
+              <li><router-link to="/reg">注册</router-link></li>
             </ul>
-            <ul class="container-right" v-if="uname">
+            <ul class="container-right" v-else>
               <li>
-               <!-- <iframe src="circle1.svg"></iframe> -->
-              <!-- <embed src="../assets/css/tou.svg" type="image/svg+xml" /> -->
-                <img src="/img/index/个人头像_o.png" alt="">
-                <a href=""><p>欢迎{{uname}}</p></a>
+                <img src="/img/index/个人头像_o.png" alt="" />
+                <a href=""
+                  ><p>欢迎{{ uname }}</p></a
+                >
               </li>
               <li><a href="">退出登录</a></li>
-               <li><a href="">购物车</a></li>
-               
+              <li><router-link to="/shopcart" href="">购物车</router-link></li>
             </ul>
           </div>
           <div class="clear"></div>
@@ -80,11 +77,16 @@
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import { mapState } from "vuex";
 export default {
+  mounted() {
+    console.log(this);
+  },
   data() {
     return {
-      serval: "",
+      serval: null,
+      // vuex 获取到用户信息
+      ...mapState(["loginStatus", "loginUserId"]),
     };
   },
   methods: {
@@ -95,8 +97,8 @@ export default {
     },
   },
   computed: {
-    ...mapState(['uname'])
-    },
+    ...mapState(["uname"]),
+  },
 };
 </script>
 

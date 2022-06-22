@@ -77,10 +77,12 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import "../assets/css/shoppingcart.css";
 export default {
   data() {
     return {
+      ...mapState(["loginUserId"]),
       tableData: [
         {
           id: 1,
@@ -106,7 +108,7 @@ export default {
   methods: {
     toggleSelection(rows) {
       if (rows) {
-        rows.forEach((row) => {
+        rows.forEach(row => {
           this.$refs.multipleTable.toggleRowSelection(row);
           console.log(1);
         });
@@ -130,8 +132,8 @@ export default {
           sums[index] = "总价";
           return;
         }
-        const values = data.map((item) => Number(item[column.property]));
-        if (!values.every((value) => isNaN(value))) {
+        const values = data.map(item => Number(item[column.property]));
+        if (!values.every(value => isNaN(value))) {
           sums[index] = values.reduce((prev, curr) => {
             const value = Number(curr);
             if (!isNaN(value)) {
@@ -148,6 +150,10 @@ export default {
 
       return sums;
     },
+    // 获取当前用户的购物车列表
+    getUserCart(){
+      
+    }
   },
 };
 </script>

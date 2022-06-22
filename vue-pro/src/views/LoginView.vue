@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   data() {
     var checkPhone = (rule, value, callback) => {
@@ -73,8 +74,12 @@ export default {
       this.axios.post(url, params).then(res => {
         console.log(res);
         if (res.data.code == 1) {
+          res.data.loginstatus = true;
           alert(res.data.msg);
-          // res.data.data[0] 将用户信息传至vuex中
+          // res.data.data[0] 将用户信息传至vuex
+          this.updateLoginStatus(res.data.loginstatus);
+          this.updateLoginUserId(res.data.data[0].u_id);
+          // this.updateUserInfo(res.data.data);
           this.$router.push("/");
         } else {
           alert(res.msg);
@@ -84,6 +89,11 @@ export default {
     resetForm(formName) {
       this.$refs[formName].resetFields();
     },
+    ...mapMutations([
+      "updateLoginStatus",
+      "updateLoginUserId",
+      "updateUserInfo",
+    ]),
   },
 };
 </script>

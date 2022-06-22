@@ -33,6 +33,7 @@ const routes = [
   {
     path: "/",
     name: "index",
+    props: true,
     component: Index,
   },
   {
