@@ -53,6 +53,26 @@ const routes = [
       title: "商品详情",
     },
   },
+  // 用户
+  {
+    path: "/user",
+    name: "user",
+    component: () => import("../views/User.vue"),
+    props: true,
+    redirect: "/user/order",
+    children: [
+      {
+        path: "order",
+        name: "order",
+        component: () => import("../components/Order.vue"),
+      },
+      {
+        path: "information",
+        name: "information",
+        component: () => import("../components/Information.vue"),
+      },
+    ],
+  },
   {
     path: "*",
     name: "404",

@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     loginStatus: sessionStorage.getItem("status"), //登录状态
     loginUserId: sessionStorage.getItem("userId"), //用户id
-    // loginUserInfo: sessionStorage.getItem("userinfo"), //用户信息
+    loginUserInfo: null, //用户信息
   },
   getters: {},
   mutations: {
@@ -19,10 +19,16 @@ export default new Vuex.Store({
       state.loginUserId = userInfo;
       sessionStorage.setItem("userId", userInfo);
     },
-    // updateUserInfo(state, userInfo) {
-    //   state.loginUserInfo = userInfo;
-    //   sessionStorage.setItem("userInfo", userInfo);
-    // },
+    updateUserInfo(state, userInfo) {
+      // let Info = userInfo.stringify();
+      console.log(userInfo);
+      state.loginUserInfo = userInfo;
+      // sessionStorage.setItem("userInfo", Info);
+    },
+    quit(state, payload) {
+      sessionStorage.removeItem("status");
+      sessionStorage.removeItem("userId");
+    },
   },
   actions: {},
   modules: {},

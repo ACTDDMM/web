@@ -74,39 +74,25 @@ router.post("/register", (req, res, next) => {
 //          2.修改除手机外的个人信息 需要传入 u_phone u_name u_pwd u_email user_name u_avatar
 router.post("/upuser", (req, res, next) => {
   let obj = req.body;
-  if (obj.hasOwnProperty("new_phone")) {
-    let sql = "update py_user set u_phone=? where u_id=?";
-    pool.query(sql, [obj.new_phone, obj.u_id], (err, result) => {
-      console.log(result);
+  console.log(obj);
+  // UPDATE `py_user` SET `u_name` = '赵六1', `u_pwd` = '1234567', `u_phone` = '123456789', `u_email` = '123456789@qq.com' WHERE `py_user`.`u_id` = 4;
+  let sql =
+    "update py_user set u_name=?,u_pwd=?,u_phone=?,u_email=? where py_user.u_id=?";
+  pool.query(
+    sql,
+    [obj.u_name, obj.u_pwd, obj.u_phone, obj.u_email, obj.u_id],
+    (err, result) => {
       if (err) {
         next(err);
         return;
       }
-      if (result.changedRows == 1) {
+      if (result.affectedRows == 1) {
         res.send({ code: 1, msg: "修改成功" });
       } else {
         res.send({ code: 0, msg: "修改失败" });
       }
-    });
-  } else {
-    let sql =
-      "update py_user set u_name=?,u_pwd=?,u_email=?,user_name=?,u_avatar=? where u_phone=?";
-    pool.query(
-      sql,
-      [obj.u_name, obj.u_pwd, obj.u_email, obj.user_name, obj.u_avatar],
-      (err, result) => {
-        if (err) {
-          next(err);
-          return;
-        }
-        if (result.changedRows == 1) {
-          res.send({ code: 1, msg: "修改成功" });
-        } else {
-          res.send({ code: 0, msg: "修改失败" });
-        }
-      }
-    );
-  }
+    }
+  );
 });
 // 导出
 module.exports = router;

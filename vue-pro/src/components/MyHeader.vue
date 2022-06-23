@@ -26,18 +26,18 @@
             </button>
           </div>
           <div class="container-right">
-            <ul v-if="!this.$store.state.loginStatus">
+            <ul v-if="!this.loginStatus">
               <li><router-link to="/login">登录</router-link></li>
               <li><router-link to="/reg">注册</router-link></li>
             </ul>
             <ul class="container-right" v-else>
               <li>
-                <img src="/img/index/个人头像_o.png" alt="" />
-                <a href=""
-                  ><p>欢迎{{ uname }}</p></a
-                >
+                <router-link to="/user/info">
+                  <img src="/img/index/个人头像_o.png" alt="" />
+                  <a href=""><p>欢迎</p></a>
+                </router-link>
               </li>
-              <li><a href="">退出登录</a></li>
+              <li><a href="" @click="exit">退出登录</a></li>
               <li><router-link to="/shopcart" href="">购物车</router-link></li>
             </ul>
           </div>
@@ -63,10 +63,14 @@
             <el-menu-item index="3">服务与支持</el-menu-item>
             <el-menu-item index="4">新品推荐</el-menu-item>
             <el-menu-item index="5">联系我们</el-menu-item>
-            <el-submenu index="6" v-show="uname">
+            <el-submenu index="6" v-show="this.loginStatus">
               <template slot="title">个人中心</template>
-              <el-menu-item index="6-1">修改个人信息</el-menu-item>
-              <el-menu-item index="6-2">个人订单查询</el-menu-item>
+              <router-link to="/user/information">
+                <el-menu-item index="6-1"> 修改个人信息 </el-menu-item>
+              </router-link>
+              <router-link to="/user/order">
+                <el-menu-item index="6-2"> 个人订单查询 </el-menu-item>
+              </router-link>
             </el-submenu>
           </el-menu>
         </div>
@@ -77,16 +81,14 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapMutations, mapState } from "vuex";
 export default {
   mounted() {
     console.log(this);
   },
   data() {
     return {
-      serval: null,
-      // vuex 获取到用户信息
-      ...mapState(["loginStatus", "loginUserId"]),
+      serval: "",
     };
   },
   methods: {
@@ -95,9 +97,14 @@ export default {
         this.$router.push("/products/" + this.serval);
       }
     },
+    ...mapMutations(["quit"]),
+    exit() {
+      this.quit();
+    },
   },
   computed: {
-    ...mapState(["uname"]),
+    // vuex 获取到用户信息
+    ...mapState(["loginStatus", "loginUserId", "loginUserInfo"]),
   },
 };
 </script>

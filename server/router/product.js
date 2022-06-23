@@ -26,8 +26,8 @@ router.get("/list", (req, res, next) => {
         // 页数
         let page = 1;
         // 循环截取
-        for (var i = 0; i < result.length; i += 6) {
-          let temp = pro.slice(i, i + 6);
+        for (var i = 0; i < result.length; i += 8) {
+          let temp = pro.slice(i, i + 8);
           // console.log(temp);
           for (let i = 0; i < temp.length; i++) {
             // console.log(i);
@@ -45,7 +45,7 @@ router.get("/list", (req, res, next) => {
           res.send({
             code: 1,
             msg: "ok",
-            data: { data: arr, pagecount: page - 1, pagesize: 6 },
+            data: { data: arr, pagecount: page - 1, pagesize: 8 },
           });
         } else {
           res.send({ code: 0, msg: "服务器端错误" });
@@ -61,8 +61,8 @@ router.get("/list", (req, res, next) => {
       // 页数
       let page = 1;
       // 循环截取
-      for (var i = 0; i < result.length; i += 6) {
-        let temp = pro.slice(i, i + 6);
+      for (var i = 0; i < result.length; i += 8) {
+        let temp = pro.slice(i, i + 8);
         // console.log(temp);
         for (let i = 0; i < temp.length; i++) {
           // console.log(i);
@@ -81,7 +81,7 @@ router.get("/list", (req, res, next) => {
         res.send({
           code: 1,
           msg: "ok",
-          data: { data: arr, pagecount: page - 1, pagesize: 6 },
+          data: { data: arr, pagecount: page - 1, pagesize: 8 },
         });
       } else {
         res.send({ code: 0, msg: "服务器端错误" });

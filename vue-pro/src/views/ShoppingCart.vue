@@ -87,28 +87,47 @@ export default {
     multipleSelection() {
       // 遍历数据 找到 count price 累加结果 赋给total
       let total = 0;
-      this.multipleSelection.forEach((value) => {
+      // let sumcount = 0;
+      this.multipleSelection.forEach(value => {
         total += value.count * value.c_price;
+        sumcount += value.count;
       });
       this.total = total.toFixed(2);
+      // console.log(sumcount);
+      // this.listenCount = sumcount;
     },
+    // listenCount() {
+    //   // 遍历数据 找到 count price 累加结果 赋给total
+    //   let total = 0;
+    //   let sumcount = 0;
+    //   this.multipleSelection.forEach(value => {
+    //     total += value.count * value.c_price;
+    //     sumcount += value.count;
+    //   });
+    //   this.total = total.toFixed(2);
+    //   console.log(sumcount);
+    //   this.listenCount = sumcount;
+    // },
   },
   mounted() {
     this.getUserCart();
+    console.log(this.listenCount);
   },
   data() {
     return {
-      ...mapState(["loginUserId"]),
       total: "0.00",
       tableData: [],
       multipleSelection: [],
+      listenCount: 0,
     };
   },
-
+  computed: {
+    ...mapState(["loginUserId"]),
+  },
   methods: {
     toggleSelection(rows) {
       if (rows) {
-        rows.forEach((row) => {
+        rows.forEach(row => {
           this.$refs.multipleTable.toggleRowSelection(row);
         });
       } else {
@@ -116,7 +135,6 @@ export default {
       }
     },
     handleSelectionChange(val) {
-      console.log(val);
       this.multipleSelection = val;
     },
     // 删除当前购物车项
@@ -125,7 +143,7 @@ export default {
       // 发送请求 删除当前用户点击的购物车项
       let url = "/shopcart/delitem?cid=";
       let params = "cid=" + row.cid;
-      this.axios.post(url, params).then((res) => {
+      this.axios.post(url, params).then(res => {
         console.log(res);
         alert(res.data.msg);
         if (res.data.code == 1) {
@@ -141,8 +159,8 @@ export default {
           sums[index] = "总价";
           return;
         }
-        const values = data.map((item) => Number(item[column.property]));
-        if (!values.every((value) => isNaN(value))) {
+        const values = data.map(item => Number(item[column.property]));
+        if (!values.every(value => isNaN(value))) {
           sums[index] = values.reduce((prev, curr) => {
             const value = Number(curr);
             if (!isNaN(value)) {
@@ -161,10 +179,9 @@ export default {
     },
     // 获取当前用户的购物车列表
     getUserCart() {
-      let url = "/shopcart/serlist?u_id=" + this.$store.state.loginUserId;
+      let url = "/shopcart/serlist?u_id=" + this.loginUserId;
       // + this.$store.state.loginUserId;
-      this.axios.get(url).then((res) => {
-        console.log(res);
+      this.axios.get(url).then(res => {
         this.tableData = res.data.data;
       });
     },

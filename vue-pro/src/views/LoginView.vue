@@ -79,7 +79,7 @@ export default {
           // res.data.data[0] 将用户信息传至vuex
           this.updateLoginStatus(res.data.loginstatus);
           this.updateLoginUserId(res.data.data[0].u_id);
-          // this.updateUserInfo(res.data.data);
+          this.updateUserInfo(res.data.data[0]);
           this.$router.push("/");
         } else {
           alert(res.msg);
