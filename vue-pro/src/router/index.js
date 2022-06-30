@@ -33,25 +33,7 @@ const routes = [
   {
     path: "/",
     name: "index",
-    props: true,
     component: Index,
-  },
-  {
-    // 参数可选
-    path: "/products/:serval?",
-    name: "products",
-    props: true,
-    component: () => import("../views/ProductList.vue"),
-  },
-  {
-    //商品详情页
-    path: "/pd/:id",
-    name: "ProductDetails",
-    props: true,
-    component: () => import("../views/ProductDetails.vue"),
-    meta: {
-      title: "商品详情",
-    },
   },
   // 用户
   {
@@ -72,6 +54,23 @@ const routes = [
         component: () => import("../components/Information.vue"),
       },
     ],
+  },
+  {
+    // 参数可选
+    path: "/products/:serval?",
+    name: "products",
+    props: true,
+    component: () => import("../views/ProductList.vue"),
+  },
+  {
+    //商品详情页
+    path: "/product/detail/:id",
+    name: "ProductDetails",
+    props: true,
+    component: () => import("../views/ProductDetails.vue"),
+    meta: {
+      title: "商品详情",
+    },
   },
   {
     path: "*",

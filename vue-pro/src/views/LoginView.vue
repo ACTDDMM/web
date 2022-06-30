@@ -66,6 +66,7 @@ export default {
       },
     };
   },
+
   methods: {
     submitForm(formName) {
       console.log(formName);
@@ -79,20 +80,23 @@ export default {
           // res.data.data[0] 将用户信息传至vuex
           this.updateLoginStatus(res.data.loginstatus);
           this.updateLoginUserId(res.data.data[0].u_id);
-          this.updateUserInfo(res.data.data[0]);
+          // this.updateUserInfo(res.data.data);
+          this.updateLoginUname(res.data.data[0].u_name);
           this.$router.push("/");
         } else {
           alert(res.msg);
         }
       });
     },
+
     resetForm(formName) {
       this.$refs[formName].resetFields();
     },
+
     ...mapMutations([
       "updateLoginStatus",
       "updateLoginUserId",
-      "updateUserInfo",
+      "updateLoginUname",
     ]),
   },
 };

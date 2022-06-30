@@ -38,9 +38,21 @@
             <!-- 数量 -->
             <div class="count">
               <b>数量：</b>
-              <button class="numberMinus">-</button>
-              <input type="text" value="1" class="number" />
-              <button class="numberAdd">+</button>
+              <button
+                class="numberMinus"
+                :disabled="userInput == 1"
+                @click="userInput--"
+              >
+                -
+              </button>
+              <input
+                ref="userInput"
+                type="text"
+                v-model="userInput"
+                @change="changeUserInput"
+                class="number"
+              />
+              <button class="numberAdd" @click="userInput++">+</button>
             </div>
             <!-- 立即购买、加入购物车 -->
             <div class="buy-addcart">
@@ -54,7 +66,7 @@
                   src="http://www.codeboy.com:9999/img/product_detail/product_detail_img7.png"
                   alt=""
                 />
-                <span>加入购物车</span>
+                <span @click="addShoppingCart">加入购物车</span>
               </div>
             </div>
           </div>
@@ -64,7 +76,7 @@
       <!-- 下部 -->
       <div class="bottom">
         <!-- 商品详情 -->
-        <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tabs v-model="activeName">
           <!-- 商品介绍 -->
           <el-tab-pane label="商品介绍" name="first">
             <div class="product-show">
@@ -98,15 +110,15 @@
                       style="background: black"
                       width="640"
                       height="360"
-                      src="/video/details/sony-ILCE-7M3.mp4"
-                      poster="/img/details/fe35fd8fc4fe06e1.jpg"
+                      :src="`/video/details/${data.c_video}`"
+                      :poster="`/img/details/${data.c_img}`"
                       controls
                     ></video>
                   </div>
                 </div>
-                <div>
+                <div style="margin-left: 20px">
                   <div class="product-name">商品细节图</div>
-                  <div>
+                  <div style="padding-top: 5px">
                     <swiper
                       class="swiper"
                       :options="swiperOptions"
@@ -116,25 +128,25 @@
                     >
                       <swiper-slide>
                         <img
-                          src="/img/details/details_img/sony/1.jpg.avif"
+                          :src="`/img/details/details_img/${data.c_swiper1}`"
                           alt=""
                         />
                       </swiper-slide>
                       <swiper-slide>
                         <img
-                          src="/img/details/details_img/sony/2.jpg.avif"
+                          :src="`/img/details/details_img/${data.c_swiper2}`"
                           alt=""
                         />
                       </swiper-slide>
                       <swiper-slide>
                         <img
-                          src="/img/details/details_img/sony/3.jpg.avif"
+                          :src="`/img/details/details_img/${data.c_swiper3}`"
                           alt=""
                         />
                       </swiper-slide>
                       <swiper-slide>
                         <img
-                          src="/img/details/details_img/sony/4.jpg.avif"
+                          :src="`/img/details/details_img/${data.c_swiper4}`"
                           alt=""
                         />
                       </swiper-slide>
@@ -147,8 +159,81 @@
               </div>
             </div>
           </el-tab-pane>
-          <el-tab-pane label="规格与包装" name="second">规格与包装</el-tab-pane>
-          <el-tab-pane label="售后保障" name="third">售后保障</el-tab-pane>
+          <el-tab-pane label="规格与包装" name="second">
+            <div class="product-show">
+              <!-- <div class="product-name">品牌: {{ data.c_category }}</div> -->
+              <div class="product-canshu" style="color: gray">
+                <div class="canshu-details_1">
+                  <div>商品名称: {{ data.c_name }}</div>
+                  <div>商品毛重: {{ data.c_weight }}</div>
+                  <div>商品产地：{{ data.c_chandi }}</div>
+                  <div>像素: {{ data.c_pixel }}</div>
+                </div>
+                <div class="canshu-details">
+                  <div>类型: {{ data.c_type }}</div>
+                  <div>视频采样: {{ data.c_spcy }}</div>
+                  <div>功能: {{ data.c_gongneng }}</div>
+                  <div>传感器尺寸：{{ data.c_frame }}</div>
+                </div>
+                <div class="canshu-details">
+                  <div>适用场景：{{ data.c_sycj }}</div>
+                  <div>RAW照片输出: {{ data.c_output }}</div>
+                  <div>适用对象：{{ data.c_sydx }}</div>
+                  <div>滤镜直径：{{ data.c_ljzj }}</div>
+                </div>
+              </div>
+
+              <p class="paper_2">
+                <img
+                  src="http://www.codeboy.com:9999/img/product_detail/product_detail_icon_2.png"
+                  alt=""
+                  class="ys5"
+                />
+                &nbsp;包装清单
+              </p>
+              <p class="content" style="color: gray">
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;相机 x1 适配器 x1 电源线 x1 电池 x1
+                便携式相机套 x1 说明书（电子版）x1
+                <br />
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;备注：相机的机身上只会标注此相机的系列，例如：FUJIFILM
+                XT-3
+                <br />
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;如果您需要核实此相机的具体配置型号是否与商城介绍相符，可电话咨询服务热线：13501014101
+              </p>
+            </div>
+          </el-tab-pane>
+          <el-tab-pane label="售后保障" name="third">
+            <div class="sale_content">
+              <p class="paper" id="sale_protect">
+                <img
+                  src="http://www.codeboy.com:9999/img/product_detail/product_detail_img16.png"
+                  alt=""
+                />
+                正品保障
+              </p>
+              <p class="content">
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本商城向您保证所售商品均为正品行货，所有自营商品开具机打发票或电子发票。
+              </p>
+
+              <p class="paper">
+                <img
+                  src="http://www.codeboy.com:9999/img/product_detail/product_detail_img16.png"
+                  alt=""
+                />
+                全国联保
+              </p>
+              <p class="content">
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;凭质保证书及本商城发票，可享受全国联保服务，与您亲临商场选购的商品享受相同的质量保证。本商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
+              </p>
+            </div>
+          </el-tab-pane>
         </el-tabs>
       </div>
     </div>
@@ -156,10 +241,14 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from "vuex";
+
 export default {
   data() {
     return {
       data: null,
+
+      userInput: 1,
 
       activeName: "first",
 
@@ -190,35 +279,110 @@ export default {
     };
   },
 
+  computed: {
+    //引入辅助函数...mapState()函数，校验登录状态
+    ...mapState([
+      "loginStatus",
+      "loginUserId",
+      "loginUname",
+      "DetailUserInput",
+      "DetailCid",
+      "DetailCTitle",
+    ]),
+  },
+
   mounted() {
-    // console.log(this);
+    console.log(this);
     this.getSingleCamera();
   },
 
   methods: {
+    //请求数据库的商品表接口并接收商品页传递过来的商品的c_id
     getSingleCamera() {
       let url = `http://127.0.0.1:3000/product/single/${this.$route.params.id}`;
-      this.axios.get(url).then(res => {
+      this.axios.get(url).then((res) => {
         console.log(res);
         this.data = res.data.data[0];
       });
     },
 
-    handleClick(tab, event) {
-      // console.log(tab, event);
+    //表单元素修改产品个数
+    changeUserInput(e) {
+      //用户输入进来的文本 * 1
+      let value = e.target.value * 1;
+      //如果用户输入进来的非法，出现NaN或者小于1
+      if (isNaN(value) || value < 1) {
+        this.userInput = 1;
+      } else {
+        //正常大于1但不能出现小数，若出现小数则向上取整
+        this.userInput = parseInt(value);
+        // console.log(this.userInput);
+      }
     },
+
+    //下方区域页签栏操作
+    // handleClick(tab, event) {
+    //   // console.log(tab, event);
+    // },
 
     //设置两个事件
     //1.鼠标进入swiper组件时，停止轮播
     stopSwiper() {
       // console.log("我进来了!");
-      // console.log(this.$refs.swiper);
+      // console.log(this.$refs);
       this.$refs.swiper.$swiper.autoplay.stop();
     },
     //2.鼠标离开swiper组件时，开启轮播
     startSwiper() {
       // console.log("我出来了!");
       this.$refs.swiper.$swiper.autoplay.start();
+    },
+
+    //引入mapMutations辅助函数
+    ...mapMutations([
+      "updateDetailUserInput",
+      "updateDetailCid",
+      "updateDetailCTitle",
+    ]),
+
+    //点击添加至购物车后，使用elementui的弹窗组件判断是否登录，若已登录则携参跳转至购物车页面，若未登录，跳转到登录页面
+    addShoppingCart() {
+      if (this.loginStatus == false || this.loginUserId == null) {
+        //使用elementui的弹窗组件
+        this.$confirm("尊敬的用户，在购买或添加到购物车前请先登录", "提示", {
+          confirmButtonText: "确定",
+          cancelButtonText: "取消",
+          type: "warning",
+          center: true,
+        })
+          .then(() => {
+            this.$router.push("/login");
+          })
+          .catch(() => {
+            this.$message({
+              type: "info",
+              message: "添加到购物车失败，请先登录",
+            });
+          });
+      } else {
+        //将用户选择的商品c_id、c_title以及数量userInput存入vuex和sessionStroage
+        this.updateDetailUserInput(this.userInput);
+        this.updateDetailCid(this.data.c_id);
+        this.updateDetailCTitle(this.data.c_title);
+
+        //发axios请求再将用户选择的商品c_id、c_title以及数量userInput存入数据库的购物车表
+        let params = `u_id=${this.loginUserId}&c_id=${this.data.c_id}&count=${this.userInput}`;
+        let url = `http://127.0.0.1:3000/shopcart/addcart`;
+        this.axios.post(url, params).then((res) => {
+          console.log(res);
+          if (res.data.code == 1) {
+            alert(res.data.msg);
+            this.$router.push("/shopcart");
+          } else {
+            alert(res.msg);
+          }
+        });
+      }
     },
   },
 };
@@ -253,6 +417,11 @@ body {
     display: flex;
     //图片水平居中
     justify-content: center;
+
+    img {
+      width: 350px;
+      height: 350px;
+    }
   }
 
   //右侧内容展示部分
@@ -418,15 +587,20 @@ body {
       }
     }
 
-    //商品视频、详图展示
+    //商品视频、详图轮播展示
     .product-video {
       margin: 30px 10px 10px 15px;
     }
 
     .swiper {
-      width: 450px;
-      //是指上下边距为5象素,左右自动边距,一般用来自动居中
-      margin: 20px 16px;
+      width: 350px;
+
+      margin: 20px 50px 20px 50px;
+
+      img {
+        width: 350px;
+        height: 350px;
+      }
 
       .swiper-button-prev {
         width: 10px;
@@ -439,6 +613,37 @@ body {
         height: 10px;
         color: black;
       }
+    }
+
+    .paper_2 {
+      margin-top: 15px;
+      margin-left: 5px;
+      font: 20px "simhei";
+      color: #0aa1ed;
+      font-family: Arial;
+    }
+
+    .content {
+      font: 16px "simhei";
+      color: black;
+      font-family: Arial;
+      margin-bottom: 30px;
+    }
+  }
+
+  .sale_content {
+    .paper {
+      margin-top: 10px;
+      font: 20px "simhei";
+      color: #0aa1ed;
+      font-family: Arial;
+    }
+
+    .content {
+      font: 16px "simhei";
+      color: black;
+      font-family: Arial;
+      margin-bottom: 30px;
     }
   }
 }

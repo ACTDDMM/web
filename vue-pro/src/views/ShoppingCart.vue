@@ -87,43 +87,24 @@ export default {
     multipleSelection() {
       // 遍历数据 找到 count price 累加结果 赋给total
       let total = 0;
-      // let sumcount = 0;
       this.multipleSelection.forEach(value => {
         total += value.count * value.c_price;
-        sumcount += value.count;
       });
       this.total = total.toFixed(2);
-      // console.log(sumcount);
-      // this.listenCount = sumcount;
     },
-    // listenCount() {
-    //   // 遍历数据 找到 count price 累加结果 赋给total
-    //   let total = 0;
-    //   let sumcount = 0;
-    //   this.multipleSelection.forEach(value => {
-    //     total += value.count * value.c_price;
-    //     sumcount += value.count;
-    //   });
-    //   this.total = total.toFixed(2);
-    //   console.log(sumcount);
-    //   this.listenCount = sumcount;
-    // },
   },
   mounted() {
     this.getUserCart();
-    console.log(this.listenCount);
   },
   data() {
     return {
+      ...mapState(["loginUserId"]),
       total: "0.00",
       tableData: [],
       multipleSelection: [],
-      listenCount: 0,
     };
   },
-  computed: {
-    ...mapState(["loginUserId"]),
-  },
+
   methods: {
     toggleSelection(rows) {
       if (rows) {
@@ -135,6 +116,7 @@ export default {
       }
     },
     handleSelectionChange(val) {
+      console.log(val);
       this.multipleSelection = val;
     },
     // 删除当前购物车项
@@ -179,9 +161,10 @@ export default {
     },
     // 获取当前用户的购物车列表
     getUserCart() {
-      let url = "/shopcart/serlist?u_id=" + this.loginUserId;
+      let url = "/shopcart/serlist?u_id=" + this.$store.state.loginUserId;
       // + this.$store.state.loginUserId;
       this.axios.get(url).then(res => {
+        console.log(res);
         this.tableData = res.data.data;
       });
     },

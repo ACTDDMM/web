@@ -26,19 +26,21 @@
             </button>
           </div>
           <div class="container-right">
-            <ul v-if="!this.loginStatus">
+            <ul v-if="!loginUname">
               <li><router-link to="/login">登录</router-link></li>
               <li><router-link to="/reg">注册</router-link></li>
             </ul>
-            <ul class="container-right" v-else>
+            <ul class="container-right" v-if="loginUname">
               <li>
-                <router-link to="/user/info">
-                  <img src="/img/index/个人头像_o.png" alt="" />
-                  <a href=""><p>欢迎</p></a>
+                <!-- <iframe src="circle1.svg"></iframe> -->
+                <!-- <embed src="../assets/css/tou.svg" type="image/svg+xml" /> -->
+                <img src="/img/index/个人头像_o.png" alt="" />
+                <router-link to="/user">
+                  <p>欢迎{{ loginUname }}</p>
                 </router-link>
               </li>
-              <li><a href="" @click="exit">退出登录</a></li>
-              <li><router-link to="/shopcart" href="">购物车</router-link></li>
+              <li @click="updateLogin">退出登录</li>
+              <li><router-link to="/shopcart">购物车</router-link></li>
             </ul>
           </div>
           <div class="clear"></div>
@@ -63,7 +65,7 @@
             <el-menu-item index="3">服务与支持</el-menu-item>
             <el-menu-item index="4">新品推荐</el-menu-item>
             <el-menu-item index="5">联系我们</el-menu-item>
-            <el-submenu index="6" v-show="this.loginStatus">
+            <el-submenu index="6" v-show="loginUname">
               <template slot="title">个人中心</template>
               <router-link to="/user/information">
                 <el-menu-item index="6-1"> 修改个人信息 </el-menu-item>
@@ -83,9 +85,6 @@
 <script>
 import { mapMutations, mapState } from "vuex";
 export default {
-  mounted() {
-    console.log(this);
-  },
   data() {
     return {
       serval: "",
@@ -97,14 +96,29 @@ export default {
         this.$router.push("/products/" + this.serval);
       }
     },
-    ...mapMutations(["quit"]),
-    exit() {
-      this.quit();
+
+    updateLogin() {
+      this.updateLoginUname(null);
+      this.updateLoginStatus(false);
+      this.updateLoginUserId(null);
+
+      sessionStorage.clear();
+      console.log(this);
+      if (this.$route.path == "/") {
+        return;
+      } else {
+        this.$router.push("/");
+      }
     },
+
+    ...mapMutations([
+      "updateLoginUname",
+      "updateLoginStatus",
+      "updateLoginUserId",
+    ]),
   },
   computed: {
-    // vuex 获取到用户信息
-    ...mapState(["loginStatus", "loginUserId", "loginUserInfo"]),
+    ...mapState(["loginUname"]),
   },
 };
 </script>

@@ -63,7 +63,32 @@ create table py_camera(
     -- 视频拍摄能力
     c_shooting varchar(32),
     -- 像素
-    c_pixel varchar(32)
+    c_pixel varchar(32),
+
+    -- 商品毛重
+    c_weight varchar(32),
+    -- 商品产地
+    c_chandi varchar(32),
+    -- 功能
+    c_gongneng varchar(128),
+    -- 适用对象
+    c_sydx varchar(32),
+    -- 滤镜直径
+    c_ljzj varchar(32),
+    -- 视频采样
+    c_spcy varchar(32),
+    -- 适用场景
+    c_sycj varchar(128),
+    -- 商品详情视频
+    c_video varchar(128),
+    -- 商品详情轮播图1
+    c_swiper1 varchar(128),
+    -- 商品详情轮播图2
+    c_swiper2 varchar(128),
+    -- 商品详情轮播图3
+    c_swiper3 varchar(128),
+    -- 商品详情轮播图4
+    c_swiper4 varchar(128)
 );
 
 -- 商品类别表
@@ -207,7 +232,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -224,7 +262,20 @@ VALUES
         '全画幅',
         '14bit',
         '4K 60P',
-        '3800-4500万'
+        '3800-4500万',
+
+        '1.45kg',
+        '中国大陆',
+        '4k视频, 高速连拍, Wi-Fi直连',
+        '专业',
+        '其他',
+        '4:2:0',
+        '人物摄影，风光摄影，高清拍摄',
+        'canon-EOS-1DX.mp4',
+        'canon/EOS-1DX/1.jpg.avif',
+        'canon/EOS-1DX/2.jpg.avif',
+        'canon/EOS-1DX/3.jpg.avif',
+        'canon/EOS-1DX/4.jpg.avif'
     );
 
 INSERT INTO
@@ -242,7 +293,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -259,7 +323,20 @@ VALUES
         '全画幅',
         '10bit',
         '4K 30P',
-        '3000-3500万'
+        '3000-3500万',
+
+        '1.5kg',
+        '中国大陆',
+        'Wi-Fi直连, 4k视频, 高速连拍',
+        '专业',
+        '其他',
+        '4:2:0',
+        '运动摄影，人物摄影，风光摄影',
+        'nikon-D6.mp4',
+        'nikon/D6/1.jpg.avif',
+        'nikon/D6/2.jpg.avif',
+        'nikon/D6/3.jpg.avif',
+        'nikon/D6/4.jpg.avif'
     );
 
 INSERT INTO
@@ -277,7 +354,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -294,7 +384,20 @@ VALUES
         '中画幅',
         '12bit',
         '4K 30P',
-        '3000-4000万'
+        '3000-4000万',
+
+        '0.7kg',
+        '中国大陆',
+        '5轴防抖, 4k视频, 高速连拍',
+        '入门级',
+        '58mm',
+        '4:2:0',
+        '运动摄影，人物摄影，风光摄影',
+        'panasonic-G100K.mp4',
+        'panasonic/G100K/1.jpg.avif',
+        'panasonic/G100K/2.jpg.avif',
+        'panasonic/G100K/3.jpg.avif',
+        'panasonic/G100K/4.jpg.avif'
     );
 
 INSERT INTO
@@ -312,7 +415,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -329,7 +445,20 @@ VALUES
         '中画幅',
         '不支持RAW',
         '不支持视频拍摄',
-        '3000-5500万'
+        '3000-5500万',
+
+        '1.67kg',
+        '瑞典',
+        '5轴防抖, 高速连拍, 运动抓拍',
+        '专业',
+        '其他',
+        '4:2:0',
+        '运动摄影，人物摄影，风光摄影',
+        'HASSELBLAD-X1D-II.mp4',
+        'hasselbland/X1D-II/1.jpg.avif',
+        'hasselbland/X1D-II/2.jpg.avif',
+        'hasselbland/X1D-II/3.jpg.avif',
+        'hasselbland/X1D-II/4.png.avif'
     );
 
 INSERT INTO
@@ -347,7 +476,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -364,7 +506,20 @@ VALUES
         '全画幅',
         '10bit',
         '4K 60P',
-        '3000-3800万'
+        '3000-3800万',
+
+        '1.15kg',
+        '中国大陆',
+        '5轴防抖, 高速连拍, 运动抓拍',
+        '中高级',
+        '其他',
+        '4:2:0',
+        '运动摄影，人物摄影，风光摄影',
+        'sony-ILCE-7M3.mp4',
+        'sony/A7RIII/1.jpg.avif',
+        'sony/A7RIII/2.jpg.avif',
+        'sony/A7RIII/3.jpg.avif',
+        'sony/A7RIII/4.jpg.avif'
     );
 
 INSERT INTO
@@ -382,7 +537,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -399,7 +567,20 @@ VALUES
         '全画幅',
         '10bit',
         '4K 30P',
-        '4000-4500万'
+        '4000-4500万',
+
+        '1.0kg',
+        '日本',
+        '高速连拍, 运动抓拍, Wi-Fi直连',
+        '中高级',
+        '其他',
+        '4:2:0',
+        '风光摄影，运动摄影，人物摄影',
+        'FIJIFILM-XT3.mp4',
+        'fujifilm/XT3/1.jpg.avif',
+        'fujifilm/XT3/2.jpg.avif',
+        'fujifilm/XT3/3.jpg.avif',
+        'fujifilm/XT3/4.jpg.avif'
     );
 
 INSERT INTO
@@ -417,7 +598,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -434,7 +628,20 @@ VALUES
         '全画幅',
         '14bit',
         '4K 30P',
-        '3000-4000万'
+        '3000-4000万',
+
+        '0.718kg',
+        '德国',
+        '高速连拍, 运动抓拍, Wi-Fi直连',
+        '专业级',
+        '其他',
+        '4:2:0',
+        '专业摄影，运动摄影，风光摄影',
+        'leica-Q2.mp4',
+        'leica/Q2/1.jpg.avif',
+        'leica/Q2/2.jpg.avif',
+        'leica/Q2/3.jpg.avif',
+        'leica/Q2/4.jpg.avif'
     );
 
 INSERT INTO
@@ -452,7 +659,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -469,7 +689,20 @@ VALUES
         'APS-C画幅',
         '6bit',
         '1080P 60P',
-        '3800-4500万'
+        '3800-4500万',
+
+        '1.0kg',
+        '日本',
+        '高速连拍, 运动抓拍, Wi-Fi直连',
+        '中端',
+        '58mm',
+        '4:2:0',
+        '专业摄影，运动摄影，风光摄影',
+        'canon-EOS-800D.mp4',
+        'canon/EOS-800D/5.jpg.avif',
+        'canon/EOS-800D/6.png.avif',
+        'canon/EOS-800D/7.jpg.avif',
+        'canon/EOS-800D/8.jpg.avif'
     );
 
 INSERT INTO
@@ -487,7 +720,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -504,7 +750,20 @@ VALUES
         '全画幅',
         '6bit',
         '1080P 960P',
-        '3000-4000万'
+        '3000-4000万',
+
+        '0.8kg',
+        '日本',
+        '高速连拍, 运动抓拍, Wi-Fi直连',
+        '高端',
+        '72mm',
+        '4:2:0',
+        '人物摄影，运动摄影，风光摄影',
+        'canon-5d4-5D-Mark-IV.mp4',
+        'canon/5d4-5D/9.jpg.avif',
+        'canon/5d4-5D/10.jpg.avif',
+        'canon/5d4-5D/11.png.avif',
+        'canon/5d4-5D/12.png.avif'
     );
 
 INSERT INTO
@@ -522,7 +781,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -539,7 +811,20 @@ VALUES
         '全画幅',
         '6bit',
         '4K 60P',
-        '3000-3800万'
+        '3000-3800万',
+
+        '300g',
+        '中国大陆',
+        '望远长焦, Wi-Fi直连',
+        '入门级',
+        '72mm',
+        '4:2:0',
+        '人物摄影，风光摄影',
+        'sony-DSC-RX100M7.mp4',
+        'sony/DSC-RX100M7/5.jpg.avif',
+        'sony/DSC-RX100M7/6.jpg.avif',
+        'sony/DSC-RX100M7/7.jpg.avif',
+        'sony/DSC-RX100M7/8.jpg.avif'
     );
 
 INSERT INTO
@@ -557,7 +842,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -574,7 +872,20 @@ VALUES
         'APS-C',
         '14bit',
         '4K视频',
-        '2000-3000万'
+        '2000-3000万',
+
+        '1.23kg',
+        '中国大陆',
+        '高速连拍, 运动抓拍',
+        '中高级',
+        '其他',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'FUJIFILM-X-T30-II.mp4',
+        'fujifilm/X-T30/5.jpg',
+        'fujifilm/X-T30/6.jpg',
+        'fujifilm/X-T30/7.jpg',
+        'fujifilm/X-T30/8.jpg'
     );
 
 INSERT INTO
@@ -592,7 +903,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -609,7 +933,20 @@ VALUES
         '全画幅',
         '14bit',
         '无视频输出',
-        '2000-3000万'
+        '2000-3000万',
+
+        '1.5kg',
+        '中国大陆',
+        '高速连拍, 运动抓拍',
+        '入门级',
+        '58mm',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'nikon-Z6.mp4',
+        'nikon/Z6/5.jpg.avif',
+        'nikon/Z6/6.jpg.avif',
+        'nikon/Z6/7.jpg.avif',
+        'nikon/Z6/8.jpg.avif'
     );
 
 INSERT INTO
@@ -627,7 +964,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -644,7 +994,20 @@ VALUES
         'APS-C',
         '14bit',
         '4K视频',
-        '2000-3000万'
+        '2000-3000万',
+
+        '1.08kg',
+        '中国大陆',
+        '高速连拍, 运动抓拍',
+        '入门级',
+        '58mm',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'nikon-Zfc.mp4',
+        'nikon/Zfc/9.jpg.avif',
+        'nikon/Zfc/10.jpg.avif',
+        'nikon/Zfc/11.jpg.avif',
+        'nikon/Zfc/12.jpg.avif'
     );
 
 INSERT INTO
@@ -662,7 +1025,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -679,7 +1055,20 @@ VALUES
         '全画幅',
         '14bit',
         '4K',
-        '5000-6000万'
+        '5000-6000万',
+
+        '0.95kg',
+        '德国',
+        '高速连拍, 运动抓拍',
+        '专业级',
+        '其他',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'leica-M11.mp4',
+        'leica/M11/5.jpg.avif',
+        'leica/M11/6.jpg.avif',
+        'leica/M11/7.jpg.avif',
+        'leica/M11/8.jpg.avif'
     );
 
 INSERT INTO
@@ -697,7 +1086,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -714,7 +1116,20 @@ VALUES
         '全画幅',
         '14bit',
         '无视频输出',
-        '5000-6000万'
+        '5000-6000万',
+
+        '0.98kg',
+        '德国',
+        '高速连拍, 运动抓拍',
+        '专业级',
+        '58mm',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'leica-D-LUX7.mp4',
+        'leica/D-LUX7/9.jpg.avif',
+        'leica/D-LUX7/10.jpg.avif',
+        'leica/D-LUX7/11.jpg.avif',
+        'leica/D-LUX7/12.jpg.avif'
     );
 
 INSERT INTO
@@ -732,7 +1147,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -749,7 +1177,20 @@ VALUES
         '全画幅',
         '10bit',
         '4K',
-        '2000-3000万'
+        '2000-3000万',
+
+        '1.45kg',
+        '日本',
+        '高速连拍, 运动抓拍',
+        '入门级',
+        '其他',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'panasonic-DMC-LX10.mp4',
+        'panasonic/DMC-LX10/5.jpg.avif',
+        'panasonic/DMC-LX10/6.jpg.avif',
+        'panasonic/DMC-LX10/7.jpg.avif',
+        'panasonic/DMC-LX10/8.jpg.avif'
     );
 
 INSERT INTO
@@ -767,7 +1208,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -784,9 +1238,24 @@ VALUES
         '中画幅',
         '10bit',
         '2K 30P,1080P 60P',
-        '5000-6000万'
+        '5000-6000万',
+
+        '1.64kg',
+        '瑞典',
+        '高速连拍, 运动抓拍, Wi-Fi直连',
+        '专业级',
+        '其他',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'HASSELBLAD-X1D-II-50C.mp4',
+        'hasselbland/X1D-II-50C/5.jpg.avif',
+        'hasselbland/X1D-II-50C/6.jpg.avif',
+        'hasselbland/X1D-II-50C/7.jpg.avif',
+        'hasselbland/X1D-II-50C/8.jpg.avif'
     );
 
+
+--
 INSERT INTO
     `py_camera` (
         `c_id`,
@@ -802,7 +1271,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -819,7 +1301,20 @@ VALUES
         '全画幅',
         '6bit',
         '无视频输出',
-        '2010万'
+        '2010万',
+
+        '0.8kg',
+        '中国大陆',
+        '高速连拍, 运动抓拍',
+        '入门级',
+        '58mm',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'sony-DSC-H300.mp4',
+        'sony/DSC-H300/9.jpg.avif',
+        'sony/DSC-H300/10.jpg.avif',
+        'sony/DSC-H300/11.jpg.avif',
+        'sony/DSC-H300/12.jpg.avif'
     );
 
 INSERT INTO
@@ -837,7 +1332,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -854,7 +1362,20 @@ VALUES
         'APS-C',
         '14bit',
         '1080P 60P',
-        '2416万'
+        '2416万',
+
+        '1.15kg',
+        '中国大陆',
+        '高速连拍, 运动抓拍',
+        '入门级',
+        '其他',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'nikon-D5600.mp4',
+        'nikon/D5600/13.png.avif',
+        'nikon/D5600/14.jpg.avif',
+        'nikon/D5600/15.jpg.avif',
+        'nikon/D5600/16.jpg.avif'
     );
 
 INSERT INTO
@@ -872,7 +1393,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -881,7 +1415,7 @@ VALUES
         'nikon',
         27199.00,
         '尼康(Nikon) D850 高端全画幅旗舰单反相机 高清数码相机 ',
-        'c0b4d73039a5cc0a327d3ac80ba19cc85.jpeg',
+        'c0b4d73039a5c0a327d3ac80ba19cc85.jpeg',
         98,
         1655627964255,
         '尼康(Nikon)D850',
@@ -889,7 +1423,20 @@ VALUES
         '全画幅',
         '14bit',
         '4k 30p 1080p 60p',
-        '3000万-4000万'
+        '3000万-4000万',
+
+        '1.05kg',
+        '中国大陆',
+        '高速连拍, 运动抓拍',
+        '中高级',
+        '78mm',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'nikon-D850.mp4',
+        'nikon/D850/17.jpg.avif',
+        'nikon/D850/18.jpg.avif',
+        'nikon/D850/19.jpg.avif',
+        'nikon/D850/20.jpg.avif'
     );
 
 INSERT INTO
@@ -907,7 +1454,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -924,7 +1484,20 @@ VALUES
         'APS-C',
         '6bit',
         '1080p 60p',
-        '2420万'
+        '2420万',
+
+        '1.08kg',
+        '中国大陆',
+        '高速连拍, 运动抓拍',
+        '入门级',
+        '其他',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'canon-80D.mp4',
+        'canon/80D/13.jpg.avif',
+        'canon/80D/14.jpg.avif',
+        'canon/80D/15.jpg.avif',
+        'canon/80D/16.jpg.avif'
     );
 
 INSERT INTO
@@ -942,7 +1515,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -959,7 +1545,20 @@ VALUES
         '全画幅',
         '14bit',
         '4k视频',
-        '2000万-3000万'
+        '2000万-3000万',
+
+        '0.9kg',
+        '日本',
+        '高速连拍, 运动抓拍',
+        '入门级',
+        '58mm',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'panasonic-S5.mp4',
+        'panasonic/S5/9.jpg.avif',
+        'panasonic/S5/10.jpg.avif',
+        'panasonic/S5/11.jpg.avif',
+        'panasonic/S5/12.jpg.avif'
     );
 
 INSERT INTO
@@ -977,7 +1576,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -994,7 +1606,20 @@ VALUES
         '全画幅',
         '14bit',
         '1080p 60p',
-        '2000万-3000万'
+        '2000万-3000万',
+
+        '1.25kg',
+        '日本',
+        '高速连拍, 运动抓拍',
+        '入门级',
+        '58mm',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'panasonic-GH6.mp4',
+        'panasonic/GH6/13.jpg.avif',
+        'panasonic/GH6/14.jpg.avif',
+        'panasonic/GH6/15.jpg.avif',
+        'panasonic/GH6/16.jpg.avif'
     );
 
 INSERT INTO
@@ -1012,7 +1637,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -1029,7 +1667,20 @@ VALUES
         '全画幅',
         '14bit',
         '1080p 60p',
-        '2000万-3000万'
+        '2000万-3000万',
+
+        '1.06kg',
+        '中国大陆',
+        '高速连拍, 运动抓拍',
+        '中高级',
+        '其他',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'sony-Alpha-7C.mp4',
+        'sony/Alpha7C/13.jpg.avif',
+        'sony/Alpha7C/14.jpg.avif',
+        'sony/Alpha7C/15.jpg.avif',
+        'sony/Alpha7C/16.jpg.avif'
     );
 
 INSERT INTO
@@ -1047,7 +1698,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -1064,7 +1728,20 @@ VALUES
         '中画幅',
         '不支持RAW',
         '2k 30p',
-        '5000万-6000万'
+        '5000万-6000万',
+
+        '1.42kg',
+        '瑞典',
+        '高速连拍, 运动抓拍',
+        '专业级',
+        '78mm',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'HASSELBLAD-907X-CFVII.mp4',
+        'hasselbland/907X-CFVII/9.jpg.avif',
+        'hasselbland/907X-CFVII/10.jpg.avif',
+        'hasselbland/907X-CFVII/11.jpg.avif',
+        'hasselbland/907X-CFVII/12.jpg.avif'
     );
 
 INSERT INTO
@@ -1082,7 +1759,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -1099,7 +1789,20 @@ VALUES
         '全画幅',
         '6bit',
         '4k视频',
-        '2000万'
+        '2000万',
+
+        '0.95kg',
+        '德国',
+        '高速连拍, 运动抓拍',
+        '入门级',
+        '58mm',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'leica-V-LUX5.mp4',
+        'leica/V-LUX5/13.jpg.avif',
+        'leica/V-LUX5/14.jpg.avif',
+        'leica/V-LUX5/15.jpg.avif',
+        'leica/V-LUX5/16.jpg.avif'
     );
 
 INSERT INTO
@@ -1117,7 +1820,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -1134,7 +1850,20 @@ VALUES
         '中画幅',
         '16bit',
         '1080p 60p',
-        '10000万'
+        '10000万',
+
+        '1.6kg',
+        '日本',
+        '高速连拍, 运动抓拍',
+        '专业级',
+        '78mm',
+        '4:2:0',
+        '专业摄影，风光摄影，风景摄像',
+        'FUJIFILM-GFX100S.mp4',
+        'fujifilm/GFX100S/9.jpg.avif',
+        'fujifilm/GFX100S/10.jpg.avif',
+        'fujifilm/GFX100S/11.jpg.avif',
+        'fujifilm/GFX100S/12.jpg.avif'
     );
 
 INSERT INTO
@@ -1152,7 +1881,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -1169,7 +1911,21 @@ VALUES
         'APS-C',
         '14bit',
         '4k视频',
-        '2000万-3000万'
+        '2000万-3000万',
+
+        '1.15kg',
+        '日本',
+        '高速连拍, 运动抓拍',
+        '入门级',
+        '其他',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'FUJIFILM-X-S10.mp4',
+        'fujifilm/X-S10/13.jpg.avif',
+        'fujifilm/X-S10/14.jpg.avif',
+        'fujifilm/X-S10/15.jpg.avif',
+        'fujifilm/X-S10/16.jpg.avif'
+
     );
 
 INSERT INTO
@@ -1187,7 +1943,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -1196,7 +1965,7 @@ VALUES
         'nikon',
         8799.00,
         '尼康(Nikon)Z 5全画幅微单相机 数码相机',
-        'f9478bca191e7fce780f349a1bcc2e1fc.jpeg',
+        'f9478bca191e7fce780f349a1bc2e1fc.jpeg',
         96,
         1655649278234,
         '尼康(Nikon)Z5',
@@ -1204,7 +1973,20 @@ VALUES
         '全画幅',
         '14bit',
         '4k视频',
-        '2000万-3000万'
+        '2000万-3000万',
+
+        '1.1kg',
+        '中国大陆',
+        '高速连拍, 运动抓拍',
+        '入门级',
+        '58mm',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'nikon-Z5.mp4',
+        'nikon/Z5/21.jpg.avif',
+        'nikon/Z5/22.jpg.avif',
+        'nikon/Z5/23.jpg.avif',
+        'nikon/Z5/24.jpg.avif'
     );
 
 INSERT INTO
@@ -1222,7 +2004,20 @@ INSERT INTO
         `c_frame`,
         `c_output`,
         `c_shooting`,
-        `c_pixel`
+        `c_pixel`,
+
+        `c_weight`,
+        `c_chandi`,
+        `c_gongneng`,
+        `c_sydx`,
+        `c_ljzj`,
+        `c_spcy`,
+        `c_sycj`,
+        `c_video`,
+        `c_swiper1`,
+        `c_swiper2`,
+        `c_swiper3`,
+        `c_swiper4`
     )
 VALUES
     (
@@ -1231,7 +2026,7 @@ VALUES
         'canon',
         12799.00,
         '佳能(Canon)EOSR专微微单相机相机微单套机全画幅微单EOSR',
-        NULL,
+        '888c1166fc6b9bc64597bab6e6ff654a.jpeg',
         83,
         1655649828538,
         '佳能EOSR',
@@ -1239,7 +2034,20 @@ VALUES
         '全画幅',
         '14bit',
         '4k视频',
-        '2000万-3000万'
+        '2000万-3000万',
+
+        '1.0kg',
+        '中国大陆',
+        '高速连拍, 运动抓拍',
+        '入门级',
+        '其他',
+        '4:2:0',
+        '人物摄影，风光摄影，风景摄像',
+        'canon-EOSR.mp4',
+        'canon/EOSR/17.jpg.avif',
+        'canon/EOSR/18.jpg.avif',
+        'canon/EOSR/19.jpg.avif',
+        'canon/EOSR/20.jpg.avif'
     );
 
 -- 首页商品

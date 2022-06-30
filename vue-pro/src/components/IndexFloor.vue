@@ -11,21 +11,18 @@
         <img src="/img/index/安全支付.png" alt="" />
         <div class="floor_content_1">
           <span>安全支付</span>
-          
         </div>
       </div>
       <div class="floor_content">
         <img src="/img/index/礼品卡.png" alt="" />
         <div class="floor_content_1">
           <span>精美礼品</span>
-          
         </div>
       </div>
       <div class="floor_content">
         <img src="/img/index/运输.png" alt="" />
         <div class="floor_content_1">
           <span>运输服务</span>
-          
         </div>
       </div>
     </div>
@@ -34,48 +31,61 @@
 
       <div class="floor-content1">
         <div class="floor-content1-item">
-          <img :src="'/img/index/product/'+items[0].pic" alt="" />
+          <!-- <router-link :to="`/product/detail/${items[0].camera_id}`"></router-link> -->
+          <router-link :to="`/product/detail/${items[0].camera_id}`">
+          </router-link>
+          <img :src="'/img/index/product/' + items[0].pic" alt="" />
 
           <p class="item1">
-           {{items[0].title}}
+            <router-link :to="`/product/detail/${items[0].camera_id}`">
+              {{ items[0].title }}
+            </router-link>
           </p>
-          <p class="item2">¥{{items[0].price}}</p>
+          <p class="item2">¥{{ items[0].price }}</p>
         </div>
 
         <div class="floor-content1-item">
-          <img :src="'/img/index/product/'+items[1].pic"  alt="" />
+          <img :src="'/img/index/product/' + items[1].pic" alt="" />
 
           <p class="item1">
-          {{items[1].title}}
+            <router-link :to="`/product/detail/${items[1].camera_id}`">{{
+              items[1].title
+            }}</router-link>
           </p>
-          <p class="item2">¥{{items[1].price}}</p>
+          <p class="item2">¥{{ items[1].price }}</p>
         </div>
 
         <div class="floor-content1-item">
-          <img :src="'/img/index/product/'+items[2].pic"  alt="" />
+          <img :src="'/img/index/product/' + items[2].pic" alt="" />
 
           <p class="item1">
-           {{items[2].title}}
+            <router-link :to="`/product/detail/${items[2].camera_id}`">{{
+              items[2].title
+            }}</router-link>
           </p>
-          <p class="item2">¥{{items[2].price}}</p>
+          <p class="item2">¥{{ items[2].price }}</p>
         </div>
 
         <div class="floor-content1-item">
-          <img :src="'/img/index/product/'+items[3].pic"  alt="" />
+          <img :src="'/img/index/product/' + items[3].pic" alt="" />
 
           <p class="item1">
-             {{items[3].title}}
+            <router-link :to="`/product/detail/${items[3].camera_id}`">{{
+              items[3].title
+            }}</router-link>
           </p>
-          <p class="item2">¥{{items[3].price}}</p>
+          <p class="item2">¥{{ items[3].price }}</p>
         </div>
 
         <div class="floor-content1-item">
-          <img :src="'/img/index/product/'+items[4].pic"  alt="" />
+          <img :src="'/img/index/product/' + items[4].pic" alt="" />
 
           <p class="item1">
-            {{items[4].title}}
+            <router-link :to="`/product/detail/${items[4].camera_id}`">{{
+              items[4].title
+            }}</router-link>
           </p>
-          <p class="item2">¥{{items[4].price}}</p>
+          <p class="item2">¥{{ items[4].price }}</p>
         </div>
       </div>
     </div>
@@ -96,46 +106,68 @@
       <div class="index-floor-item">
         <div class="floor-content3">
           <div class="floor-content3-item">
-            <img class="imgbig" :src="'/img/index/product/'+items[5].pic"   alt="" />
+            <img
+              class="imgbig"
+              :src="'/img/index/product/' + items[5].pic"
+              alt=""
+            />
           </div>
           <div class="floor-content3-contanier">
-            <p> {{items[5].title}}</p>
-            <p>¥{{items[5].price}}</p>
-            <p><a href="">查看详情</a></p>
+            <p>{{ items[5].title }}</p>
+            <p>¥{{ items[5].price }}</p>
+            <p>
+              <router-link :to="`/product/detail/${items[5].camera_id}`"
+                >查看详情</router-link
+              >
+            </p>
           </div>
         </div>
-        <div  class="floor-content4">
-          <img class="imgsm" :src="'/img/index/product/'+items[6].pic"  alt="" />
-          <p>{{items[6].title}}</p>
-          <p>¥{{items[6].price}}</p>
-          <p><a href="">查看详情</a></p>
+        <div class="floor-content4">
+          <img
+            class="imgsm"
+            :src="'/img/index/product/' + items[6].pic"
+            alt=""
+          />
+          <p>{{ items[6].title }}</p>
+          <p>¥{{ items[6].price }}</p>
+          <p>
+            <router-link :to="`/product/detail/${items[6].camera_id}`"
+              >查看详情</router-link
+            >
+          </p>
         </div>
         <div class="floor-content4">
-          <img class="imgsm" :src="'/img/index/product/'+items[7].pic"  alt="" />
-          <p>{{items[7].title}}</p>
-          <p>¥{{items[7].price}}</p>
-          <p><a href="">查看详情</a></p>
+          <img
+            class="imgsm"
+            :src="'/img/index/product/' + items[7].pic"
+            alt=""
+          />
+          <p>{{ items[7].title }}</p>
+          <p>¥{{ items[7].price }}</p>
+          <p>
+            <router-link :to="`/product/detail/${items[7].camera_id}`"
+              >查看详情</router-link
+            >
+          </p>
         </div>
       </div>
     </div>
     <div class="index-floor5">
-        <div class="floor-conten5">
-            <img src="/img/index/2.jpeg" alt="">
-        </div>
-        <div class="floor-conten5">
-            <img src="/img/index/3.jpeg" alt="">
-        </div>
+      <div class="floor-conten5">
+        <img src="/img/index/2.jpeg" alt="" />
+      </div>
+      <div class="floor-conten5">
+        <img src="/img/index/3.jpeg" alt="" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props:['items']
+  props: ["items"],
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
-<style scoped src="../assets/css/indexfloor.css">
-</style> 
+<style lang="scss" scoped></style>
+<style scoped src="../assets/css/indexfloor.css"></style>
