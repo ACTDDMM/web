@@ -9,21 +9,25 @@
         :options="swiperOptions"
         v-if="data"
       >
-        <swiper-slide class="swiper-lunbo" v-for="{cid,img} in data.data.carousel" :key="cid">
-          <img :src="`${img}`" alt="" />
+        <swiper-slide
+          class="swiper-lunbo"
+          v-for="{ cid, img } in data.data.carousel"
+          :key="cid"
+        >
+          <router-link :to="'/product/detail/' + cid">
+            <img :src="`${img}`" alt="" />
+          </router-link>
         </swiper-slide>
-       
+
         <!-- 分页器: 必须放入对应插槽中 -->
         <div class="swiper-pagination" slot="pagination"></div>
         <!-- 左右箭头: 必须放在对应的插槽中 -->
       </swiper>
     </div>
-    
+
     <template v-if="data">
       <index-floor :items="data.data.indexproduct"></index-floor>
     </template>
-     
-    
   </div>
 </template>
 
@@ -69,18 +73,16 @@ export default {
       this.$refs.swiper.$swiper.autoplay.start();
     },
     // 发送请求
-    getdata(){
-      let url="/product/indata"
-      this.axios.get(url).then((res)=>{
-        console.log(res)
-        this.data=res.data
-      })
+    getdata() {
+      let url = "/product/indata";
+      this.axios.get(url).then((res) => {
+        console.log(res);
+        this.data = res.data;
+      });
     },
-   
   },
-  mounted () {
+  mounted() {
     this.getdata();
-   
   },
 };
 </script>

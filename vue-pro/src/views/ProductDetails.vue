@@ -17,7 +17,7 @@
           <div class="price">
             <div class="pro-price">
               <b>售价：</b>
-              <span>￥{{ data.c_price }}</span>
+              <span>￥{{ data.c_price }}.00元</span>
             </div>
             <div class="promise">
               <b>服务承诺：</b>

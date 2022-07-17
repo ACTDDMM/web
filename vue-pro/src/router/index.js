@@ -11,6 +11,7 @@ const routes = [
     path: "/login",
     name: "login",
     meta: {
+      title: "用户登录",
       isshow: true,
     },
     component: () => import("../views/LoginView.vue"),
@@ -20,6 +21,7 @@ const routes = [
     path: "/reg",
     name: "register",
     meta: {
+      title: "商品详情",
       isshow: true,
     },
     component: () => import("../views/RegView.vue"),
@@ -28,11 +30,17 @@ const routes = [
   {
     path: "/shopcart",
     name: "shopcart",
+    meta: {
+      title: "购物车",
+    },
     component: () => import("../views/ShoppingCart.vue"),
   },
   {
     path: "/",
     name: "index",
+    meta: {
+      title: "相机商城-首页",
+    },
     component: Index,
   },
   // 用户
@@ -46,11 +54,17 @@ const routes = [
       {
         path: "order",
         name: "order",
+        meta: {
+          title: "订单",
+        },
         component: () => import("../components/Order.vue"),
       },
       {
         path: "information",
         name: "information",
+        meta: {
+          title: "用户信息",
+        },
         component: () => import("../components/Information.vue"),
       },
     ],
@@ -59,6 +73,9 @@ const routes = [
     // 参数可选
     path: "/products/:serval?",
     name: "products",
+    meta: {
+      title: "搜索",
+    },
     props: true,
     component: () => import("../views/ProductList.vue"),
   },

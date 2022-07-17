@@ -1,6 +1,6 @@
 // 引入express
 const express = require("express");
-
+const zhenzismsClient = require("./zhenzisms");
 // 引入连接池
 const pool = require("../mysql/mysql");
 
@@ -8,6 +8,25 @@ const pool = require("../mysql/mysql");
 const router = express.Router();
 
 // 路由---
+// 测试手机验证码
+router.get("/test", (req, res, next) => {
+  console.log(zhenzismsClient);
+  var client = new zhenzismsClient(
+    "sms_developer.zhenzikj.com",
+    "112011",
+    "f99c8279-be7c-4474-bd0a-97f0dd422c77"
+  );
+  var params = {};
+  params.templateId = "9882";
+  params.number = "13759963313";
+  params.templateParams = ["2221", "5分钟"];
+  var result = client.send(params);
+  console.log(result);
+  res.send({
+    "code":0,
+    "data":"发送成功"
+});
+});
 // 1.用户登录
 // 请求方式 post
 // 接口地址 http://127.0.0.1:3000/user/login

@@ -272,10 +272,10 @@ VALUES
         '4:2:0',
         '人物摄影，风光摄影，高清拍摄',
         'canon-EOS-1DX.mp4',
-        'canon/EOS-1DX/1.jpg.avif',
-        'canon/EOS-1DX/2.jpg.avif',
-        'canon/EOS-1DX/3.jpg.avif',
-        'canon/EOS-1DX/4.jpg.avif'
+        'canon/1.jpg.avif',
+        'canon/2.jpg.avif',
+        'canon/3.jpg.avif',
+        'canon/4.jpg.avif'
     );
 
 INSERT INTO
@@ -333,10 +333,10 @@ VALUES
         '4:2:0',
         '运动摄影，人物摄影，风光摄影',
         'nikon-D6.mp4',
-        'nikon/D6/1.jpg.avif',
-        'nikon/D6/2.jpg.avif',
-        'nikon/D6/3.jpg.avif',
-        'nikon/D6/4.jpg.avif'
+        'nikon/1.jpg.avif',
+        'nikon/2.jpg.avif',
+        'nikon/3.jpg.avif',
+        'nikon/4.jpg.avif'
     );
 
 INSERT INTO
@@ -394,10 +394,10 @@ VALUES
         '4:2:0',
         '运动摄影，人物摄影，风光摄影',
         'panasonic-G100K.mp4',
-        'panasonic/G100K/1.jpg.avif',
-        'panasonic/G100K/2.jpg.avif',
-        'panasonic/G100K/3.jpg.avif',
-        'panasonic/G100K/4.jpg.avif'
+        'panasonic/1.jpg.avif',
+        'panasonic/2.jpg.avif',
+        'panasonic/3.jpg.avif',
+        'panasonic/4.jpg.avif'
     );
 
 INSERT INTO
